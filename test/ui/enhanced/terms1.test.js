@@ -162,7 +162,11 @@ test('TERMS1: the documents ship - build inputs, served at the paths the form li
 });
 
 test('TERMS1: the build seam dresses both documents in the skin - its tokens, the five, their one rule set, the fonts and the icon (mutant: a path dropped)', () => {
-  assert.deepEqual([...DOCUMENT_PATHS], ['/terms/index.html', '/privacy/index.html']);
+  // PLAYER-GUIDE: the player guide's five pages are documents beside the two legal ones (test/ui/enhanced/playerguide1.test.js)
+  assert.deepEqual([...DOCUMENT_PATHS], [
+    '/terms/index.html', '/privacy/index.html',
+    '/guide/index.html', '/guide/races.html', '/guide/skills.html', '/guide/attributes.html', '/guide/custom-classes.html',
+  ]);
   const { handler } = landingHtml().transformIndexHtml;
   for (const path of DOCUMENT_PATHS) {
     const out = handler('<html><head></head><body></body></html>', { path });

@@ -211,6 +211,13 @@ export default defineConfig({
         // links to (src/net/legalLaw.js TERMS_URL and PRIVACY_URL).
         terms: 'terms/index.html',
         privacy: 'privacy/index.html',
+        // PLAYER-GUIDE: the player guide - documents, dressed as the two
+        // above are. Its class files are public/guide/classes/, copied whole.
+        guide: 'guide/index.html',
+        guideRaces: 'guide/races.html',
+        guideSkills: 'guide/skills.html',
+        guideAttributes: 'guide/attributes.html',
+        guideClasses: 'guide/custom-classes.html',
         viewer: 'viewer.html',
         sky: 'sky.html',   // ES1: the enhanced sky lab
         water: 'water.html', // WATER1: the enhanced water lab (src/tools/waterLab.js)

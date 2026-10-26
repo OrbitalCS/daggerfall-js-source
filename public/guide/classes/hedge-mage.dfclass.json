@@ -1,0 +1,59 @@
+{
+  "format": "daggerfall-enhanced/custom-class",
+  "version": 1,
+  "name": "Hedge Mage",
+  "hitPointsPerLevel": 6,
+  "skills": {
+    "primary": [
+      "Destruction",
+      "Restoration",
+      "Alteration"
+    ],
+    "major": [
+      "Mysticism",
+      "Thaumaturgy",
+      "Illusion"
+    ],
+    "minor": [
+      "Short Blade",
+      "Dodging",
+      "Running",
+      "Daedric",
+      "Etiquette",
+      "Mercantile"
+    ]
+  },
+  "attributes": {
+    "strength": 35,
+    "intelligence": 75,
+    "willpower": 65,
+    "agility": 45,
+    "endurance": 40,
+    "personality": 45,
+    "speed": 50,
+    "luck": 45
+  },
+  "advantages": [
+    {
+      "primary": "increasedMagery",
+      "secondary": "intInSpellPoints2"
+    },
+    {
+      "primary": "resistance",
+      "secondary": "toMagic"
+    }
+  ],
+  "disadvantages": [
+    {
+      "primary": "forbiddenArmorType",
+      "secondary": "plate"
+    }
+  ],
+  "reputations": {
+    "merchants": 0,
+    "peasants": 0,
+    "scholars": 0,
+    "nobility": 0,
+    "underworld": 0
+  }
+}

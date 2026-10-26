@@ -38,6 +38,11 @@ const PUBLIC_ALLOWLIST = new Map([
   // (studioArt below), not to rows here.
   ['public/art/studio/README.md', "STUDIO1: the studio's guide for the game's artists - documentation"],
   ['public/art/studio/artists.json', "STUDIO1: the studio's roster - each artist's folder, name and the word that approved them"],
+  // PLAYER-GUIDE (2026-10-25): the player guide's example builds - class files the game's own exporter writes
+  // (src/systems/customClass.js customClassDoc), text: a name, numbers and skill names. No ARENA2 byte in them.
+  ['public/guide/classes/shieldbearer.dfclass.json', "PLAYER-GUIDE: an example class file, the builder's own export - text, the port's own"],
+  ['public/guide/classes/hedge-mage.dfclass.json', "PLAYER-GUIDE: an example class file, the builder's own export - text, the port's own"],
+  ['public/guide/classes/sunscorned.dfclass.json', "PLAYER-GUIDE: an example class file, the builder's own export - text, the port's own"],
   // TI2 (2026-09-11): THE HOME-SCREEN APP. The manifest is text; the
   // three icons are drawn by scripts/makeIcons.mjs from the enhanced
   // skin's own colour tokens (a block-letter D over a seeded star

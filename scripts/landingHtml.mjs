@@ -228,7 +228,11 @@ function skinTags(tokens, fonts) {
    skin itself uses, the law the landing page is held to. NO NIGHT SKY and
    no plaque: a document read to the end wants a quiet ground and a
    measure a line can be followed across. */
-export const DOCUMENT_PATHS = Object.freeze(['/terms/index.html', '/privacy/index.html']);
+// PLAYER-GUIDE (2026-10-25): the player guide's pages are documents too - the same skin, the same one rule set.
+export const DOCUMENT_PATHS = Object.freeze([
+  '/terms/index.html', '/privacy/index.html',
+  '/guide/index.html', '/guide/races.html', '/guide/skills.html', '/guide/attributes.html', '/guide/custom-classes.html',
+]);
 
 export const DOCUMENT_CSS = `* { box-sizing: border-box; }
 body {

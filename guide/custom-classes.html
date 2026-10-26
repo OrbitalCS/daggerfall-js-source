@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Custom classes - DFO Online</title>
+  <meta name="description" content="How DFO Online's class builder works, how to export and import a class file, and three example builds to load." />
+  <!--
+    PLAYER-GUIDE (2026-10-25): the class builder, explained, and three
+    example builds. A DOCUMENT: no script, no file of its own, no style of its own
+    (scripts/landingHtml.mjs DOCUMENT_PATHS dresses it at build).
+
+    THE EXAMPLE BUILDS ARE THE GAME'S OWN FILES, not hand-written: each was
+    written by src/systems/customClass.js customClassDoc, serialised as the
+    builder's Export does, read back by parseCustomClassDoc and passed through
+    the builder's exit gates. They live in public/guide/classes/ because Vite
+    copies public/ into the build as it is; a file beside this page would
+    never reach the site. The numbers below are read from those files.
+  -->
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="docbar">
+    <a class="home" href="../">DFO Online</a>
+    <nav class="caps" aria-label="Guide">
+      <a href="../guide/">How to play</a>
+      <a href="../guide/races.html">Races</a>
+      <a href="../guide/skills.html">Skills</a>
+      <a href="../guide/attributes.html">Attributes</a>
+      <a href="../guide/custom-classes.html" aria-current="page">Custom classes</a>
+    </nav>
+  </header>
+  <main id="main" class="doc">
+    <article>
+      <h1>Custom classes</h1>
+      <p>Daggerfall lets you build a class of your own instead of taking one of its eighteen. On the class screen, choose the last row, <strong>Build a class of your own</strong>. You can save what you build to a file and load it again on any character, on any device.</p>
+
+      <h2 id="builder">How the builder works</h2>
+      <ul>
+        <li><strong>Hit points per level,</strong> from 4 to 30. The default is 8.</li>
+        <li><strong>Attributes.</strong> All eight start at 50. Move points from one to another, each between 10 and 75, until none are left over.</li>
+        <li><strong>Skills.</strong> Three primary, three major and six minor, each skill once. Your level rises as these skills do. A magic skill among your primary or major skills starts you with the Spellsword's spells.</li>
+        <li><strong>Special advantages and disadvantages,</strong> up to seven of each. Some cannot be taken together, such as an immunity and a weakness to the same thing.</li>
+        <li><strong>Reputations</strong> with merchants, peasants, scholars, the nobility and the underworld. What you raise in one you must lower in another.</li>
+      </ul>
+
+      <h2 id="dagger">The difficulty dagger</h2>
+      <p>The dagger beside the builder is the class's point total. Every hit point above 8 adds one point, and every hit point below 8 takes away two. Advantages add points. Disadvantages take them away.</p>
+      <p>The dagger does not measure how hard the class is to play. It measures how fast it levels. The higher the dagger, the more each skill has to be used before it rises: a class at the bottom (-12) levels about ten times as fast as one at the top (+40). Outside that range the dagger is in the red, and Create will not make the class.</p>
+
+      <h2 id="files">Export and import a class</h2>
+      <ul>
+        <li><strong>Export</strong> in the builder copies the class to your clipboard, or saves it as a file ending <strong>.dfclass.json</strong>.</li>
+        <li><strong>Import</strong> loads one: paste it into the box and press Load, paste from the clipboard, or open a file. It replaces the class you were building.</li>
+        <li>An imported class still has to pass every check Create makes. Any special pick the builder would not allow is left out, and the builder tells you how many.</li>
+      </ul>
+
+      <h2 id="example-builds">Example builds</h2>
+      <p>Three builds that show the builder's rules at work: one high on the dagger, one in the middle and one at the bottom. Save a file and open it with Import to see it in the builder, or to start your own from it.</p>
+
+      <h2 id="shieldbearer">Shieldbearer</h2>
+      <p><strong>Shows:</strong> what hit points cost. 20 per level is twelve points on the dagger by itself, so the class levels slowly.</p>
+      <p><a href="classes/shieldbearer.dfclass.json" download>shieldbearer.dfclass.json</a></p>
+      <ul>
+        <li><strong>Dagger:</strong> +19 (levels at ×1.91). 20 hit points per level is +12.</li>
+        <li><strong>Advantages:</strong> Rapid Healing (General) +4, Resistance to Poison +5.</li>
+        <li><strong>Disadvantages:</strong> Forbidden Material: Daedric -2.</li>
+        <li><strong>Primary:</strong> Long Blade, Dodging, Medical. <strong>Major:</strong> Blunt Weapon, Archery, Restoration. <strong>Minor:</strong> Swimming, Climbing, Running, Jumping, Etiquette, Streetwise.</li>
+        <li><strong>Attributes:</strong> Endurance 70 and Strength 60, paid for with Intelligence and Personality at 40.</li>
+      </ul>
+
+      <h2 id="hedge-mage">Hedge Mage</h2>
+      <p><strong>Shows:</strong> paying for magic. Few hit points and a forbidden armor take points off the dagger, and Increased Magery puts them back. With all six schools in its primary and major skills, it starts with the Spellsword's spells.</p>
+      <p><a href="classes/hedge-mage.dfclass.json" download>hedge-mage.dfclass.json</a></p>
+      <ul>
+        <li><strong>Dagger:</strong> +4 (levels at ×1.13). 6 hit points per level is -4.</li>
+        <li><strong>Advantages:</strong> Increased Magery (2× INT in spell points) +8, Resistance to Magic +5.</li>
+        <li><strong>Disadvantages:</strong> Forbidden Armor Type: Plate -5.</li>
+        <li><strong>Primary:</strong> Destruction, Restoration, Alteration. <strong>Major:</strong> Mysticism, Thaumaturgy, Illusion. <strong>Minor:</strong> Short Blade, Dodging, Running, Daedric, Etiquette, Mercantile.</li>
+        <li><strong>Attributes:</strong> Intelligence 75 and Willpower 65, paid for with Strength at 35 and Endurance at 40.</li>
+      </ul>
+
+      <h2 id="sunscorned">Sunscorned</h2>
+      <p><strong>Shows:</strong> how far disadvantages can take the dagger. Four of them, two heavy, bring it to the bottom of its range, the fastest a class can level. It also moves reputation from the nobility to the underworld.</p>
+      <p><a href="classes/sunscorned.dfclass.json" download>sunscorned.dfclass.json</a></p>
+      <ul>
+        <li><strong>Dagger:</strong> -12, the bottom (levels at ×0.30). 12 hit points per level is +4.</li>
+        <li><strong>Advantages:</strong> Expertise in Hand-to-Hand +2, Athleticism +4, Adrenaline Rush +4.</li>
+        <li><strong>Disadvantages:</strong> Damage from Sunlight -10, Critical Weakness to Fire -14, Forbidden Shield Types: Tower Shield -1, Forbidden Material: Iron -1.</li>
+        <li><strong>Primary:</strong> Hand-to-Hand, Stealth, Dodging. <strong>Major:</strong> Critical Strike, Climbing, Lockpicking. <strong>Minor:</strong> Running, Jumping, Swimming, Streetwise, Pickpocket, Medical.</li>
+        <li><strong>Attributes:</strong> Agility and Speed 65, paid for with Personality at 35.</li>
+        <li><strong>Reputation:</strong> underworld +2, nobility -2.</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>

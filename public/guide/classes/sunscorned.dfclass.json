@@ -1,0 +1,73 @@
+{
+  "format": "daggerfall-enhanced/custom-class",
+  "version": 1,
+  "name": "Sunscorned",
+  "hitPointsPerLevel": 12,
+  "skills": {
+    "primary": [
+      "Hand-to-Hand",
+      "Stealth",
+      "Dodging"
+    ],
+    "major": [
+      "Critical Strike",
+      "Climbing",
+      "Lockpicking"
+    ],
+    "minor": [
+      "Running",
+      "Jumping",
+      "Swimming",
+      "Streetwise",
+      "Pickpocket",
+      "Medical"
+    ]
+  },
+  "attributes": {
+    "strength": 55,
+    "intelligence": 40,
+    "willpower": 40,
+    "agility": 65,
+    "endurance": 55,
+    "personality": 35,
+    "speed": 65,
+    "luck": 45
+  },
+  "advantages": [
+    {
+      "primary": "expertiseIn",
+      "secondary": "handToHand"
+    },
+    {
+      "primary": "athleticism"
+    },
+    {
+      "primary": "adrenalineRush"
+    }
+  ],
+  "disadvantages": [
+    {
+      "primary": "damage",
+      "secondary": "fromSunlight"
+    },
+    {
+      "primary": "criticalWeakness",
+      "secondary": "toFire"
+    },
+    {
+      "primary": "forbiddenShieldTypes",
+      "secondary": "towerShield"
+    },
+    {
+      "primary": "forbiddenMaterial",
+      "secondary": "iron"
+    }
+  ],
+  "reputations": {
+    "merchants": 0,
+    "peasants": 0,
+    "scholars": 0,
+    "nobility": -2,
+    "underworld": 2
+  }
+}

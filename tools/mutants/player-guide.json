@@ -1,0 +1,252 @@
+[
+  {
+    "name": "PLAYER-GUIDE-skill-entry-dropped",
+    "file": "guide/skills.html",
+    "old": "<p id=\"skill-harpy\">",
+    "new": "<p id=\"language-harpy\">",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "A skill the game has, missing from its page."
+  },
+  {
+    "name": "PLAYER-GUIDE-skill-misnamed",
+    "file": "guide/skills.html",
+    "old": "<strong>Harpy</strong>",
+    "new": "<strong>Harpie</strong>",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "An entry titled with a name the game does not print."
+  },
+  {
+    "name": "PLAYER-GUIDE-skill-invented",
+    "file": "guide/skills.html",
+    "old": "<h2 id=\"healing\">Healing</h2>",
+    "new": "<h2 id=\"healing\">Healing</h2>\n      <p id=\"skill-alchemy\"><strong>Alchemy</strong></p>",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "A skill the game does not have."
+  },
+  {
+    "name": "PLAYER-GUIDE-attribute-renamed",
+    "file": "guide/attributes.html",
+    "old": "id=\"attribute-luck\"",
+    "new": "id=\"attribute-fortune\"",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "An attribute under a key the game does not use."
+  },
+  {
+    "name": "PLAYER-GUIDE-skill-on-attributes-page",
+    "file": "guide/attributes.html",
+    "old": "<h2 id=\"rules\">How they work</h2>",
+    "new": "<p id=\"skill-medical\"><strong>Medical</strong></p>\n      <h2 id=\"rules\">How they work</h2>",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "Each page names its own kind."
+  },
+  {
+    "name": "PLAYER-GUIDE-a-script-added",
+    "file": "guide/skills.html",
+    "old": "</body>",
+    "new": "<script>0</script>\n</body>",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "A document runs no script."
+  },
+  {
+    "name": "PLAYER-GUIDE-a-style-attribute",
+    "file": "guide/attributes.html",
+    "old": "<h1>Attributes</h1>",
+    "new": "<h1 style=\"color:red\">Attributes</h1>",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "The skin is put in at build; a page brings none of its own."
+  },
+  {
+    "name": "PLAYER-GUIDE-bar-drops-a-page",
+    "file": "guide/index.html",
+    "old": "      <a href=\"../guide/attributes.html\">Attributes</a>\n",
+    "new": "",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "Every bar names all four."
+  },
+  {
+    "name": "PLAYER-GUIDE-bar-current-wrong",
+    "file": "guide/skills.html",
+    "old": "<a href=\"../guide/skills.html\" aria-current=\"page\">Skills</a>",
+    "new": "<a href=\"../guide/skills.html\">Skills</a>",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "The bar says which page you are on."
+  },
+  {
+    "name": "PLAYER-GUIDE-an-input-dropped",
+    "file": "vite.config.js",
+    "old": "        guideSkills: 'guide/skills.html',\n",
+    "new": "",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "A page missing here works under npm run dev and never ships."
+  },
+  {
+    "name": "PLAYER-GUIDE-a-document-path-dropped",
+    "file": "scripts/landingHtml.mjs",
+    "old": "'/guide/attributes.html', ",
+    "new": "",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "An undressed page reads var() as nothing."
+  },
+  {
+    "name": "PLAYER-GUIDE-landing-unlinked",
+    "file": "index.html",
+    "old": "      <a href=\"./guide/\">Guide</a>\n",
+    "new": "",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "The site links its guide."
+  },
+  {
+    "name": "PLAYER-GUIDE-class-field-corrupted",
+    "file": "public/guide/classes/sunscorned.dfclass.json",
+    "old": "\"hitPointsPerLevel\": 12,",
+    "new": "\"hitPointsPerLevel\": 31,",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "A file the builder's own door refuses."
+  },
+  {
+    "name": "PLAYER-GUIDE-class-pick-skipped",
+    "file": "public/guide/classes/hedge-mage.dfclass.json",
+    "old": "\"secondary\": \"plate\"",
+    "new": "\"secondary\": \"mithril\"",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "A special pick the builder would leave out."
+  },
+  {
+    "name": "PLAYER-GUIDE-class-pool-unspent",
+    "file": "public/guide/classes/shieldbearer.dfclass.json",
+    "old": "\"strength\": 60,",
+    "new": "\"strength\": 61,",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "An unbalanced pool loads, and Create refuses it."
+  },
+  {
+    "name": "PLAYER-GUIDE-class-reps-unbalanced",
+    "file": "public/guide/classes/sunscorned.dfclass.json",
+    "old": "\"underworld\": 2",
+    "new": "\"underworld\": 3",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "The reputation window will not close on an unbalanced ledger."
+  },
+  {
+    "name": "PLAYER-GUIDE-class-dagger-in-the-red",
+    "file": "public/guide/classes/sunscorned.dfclass.json",
+    "old": "\"hitPointsPerLevel\": 12,",
+    "new": "\"hitPointsPerLevel\": 11,",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "One hit point fewer puts the floor build below -12."
+  },
+  {
+    "name": "PLAYER-GUIDE-class-not-offered",
+    "file": "guide/custom-classes.html",
+    "old": "<a href=\"classes/hedge-mage.dfclass.json\" download>",
+    "new": "<a href=\"classes/hedge-mage.json\" download>",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "The page offers exactly the files that ship."
+  },
+  {
+    "name": "PLAYER-GUIDE-race-dropped",
+    "file": "guide/races.html",
+    "old": "<h2 id=\"race-argonian\">",
+    "new": "<h2 id=\"lizard-argonian\">",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "A race the game has, missing from its page."
+  },
+  {
+    "name": "PLAYER-GUIDE-race-misnamed",
+    "file": "guide/races.html",
+    "old": "<h2 id=\"race-dark-elf\">Dark Elf</h2>",
+    "new": "<h2 id=\"race-dark-elf\">Dunmer</h2>",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "An entry titled with a name the game does not use."
+  },
+  {
+    "name": "PLAYER-GUIDE-race-invented",
+    "file": "guide/races.html",
+    "old": "<h2 id=\"race-breton\">Breton</h2>",
+    "new": "<h2 id=\"race-imperial\">Imperial</h2>\n      <h2 id=\"race-breton\">Breton</h2>",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "A race the game does not let you play."
+  },
+  {
+    "name": "PLAYER-GUIDE-race-on-skills-page",
+    "file": "guide/skills.html",
+    "old": "<h2 id=\"healing\">Healing</h2>",
+    "new": "<h2 id=\"race-nord\">Nord</h2>\n      <h2 id=\"healing\">Healing</h2>",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "Each page names its own kind."
+  },
+  {
+    "name": "PLAYER-GUIDE-bar-drops-races",
+    "file": "guide/attributes.html",
+    "old": "      <a href=\"../guide/races.html\">Races</a>\n",
+    "new": "",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "Every bar names all five."
+  },
+  {
+    "name": "PLAYER-GUIDE-races-input-dropped",
+    "file": "vite.config.js",
+    "old": "        guideRaces: 'guide/races.html',\n",
+    "new": "",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "A page missing here works under npm run dev and never ships."
+  },
+  {
+    "name": "PLAYER-GUIDE-races-path-dropped",
+    "file": "scripts/landingHtml.mjs",
+    "old": "'/guide/races.html', ",
+    "new": "",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "An undressed page reads var() as nothing."
+  }
+]

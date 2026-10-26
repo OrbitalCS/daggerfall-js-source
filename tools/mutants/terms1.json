@@ -154,8 +154,8 @@
   {
     "name": "TERMS1-a-document-path-dropped",
     "file": "scripts/landingHtml.mjs",
-    "old": "Object.freeze(['/terms/index.html', '/privacy/index.html'])",
-    "new": "Object.freeze(['/terms/index.html'])",
+    "old": "  '/terms/index.html', '/privacy/index.html',\n",
+    "new": "  '/terms/index.html',\n",
     "tests": ["test/ui/enhanced/terms1.test.js"],
     "note": "Both documents wear the skin."
   },

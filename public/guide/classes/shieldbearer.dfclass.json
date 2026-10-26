@@ -1,0 +1,59 @@
+{
+  "format": "daggerfall-enhanced/custom-class",
+  "version": 1,
+  "name": "Shieldbearer",
+  "hitPointsPerLevel": 20,
+  "skills": {
+    "primary": [
+      "Long Blade",
+      "Dodging",
+      "Medical"
+    ],
+    "major": [
+      "Blunt Weapon",
+      "Archery",
+      "Restoration"
+    ],
+    "minor": [
+      "Swimming",
+      "Climbing",
+      "Running",
+      "Jumping",
+      "Etiquette",
+      "Streetwise"
+    ]
+  },
+  "attributes": {
+    "strength": 60,
+    "intelligence": 40,
+    "willpower": 45,
+    "agility": 50,
+    "endurance": 70,
+    "personality": 40,
+    "speed": 50,
+    "luck": 45
+  },
+  "advantages": [
+    {
+      "primary": "rapidHealing",
+      "secondary": "general"
+    },
+    {
+      "primary": "resistance",
+      "secondary": "toPoison"
+    }
+  ],
+  "disadvantages": [
+    {
+      "primary": "forbiddenMaterial",
+      "secondary": "daedric"
+    }
+  ],
+  "reputations": {
+    "merchants": 0,
+    "peasants": 0,
+    "scholars": 0,
+    "nobility": 0,
+    "underworld": 0
+  }
+}
