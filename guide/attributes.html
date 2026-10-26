@@ -28,7 +28,7 @@
       <a href="../guide/custom-classes.html">Custom classes</a>
     </nav>
   </header>
-  <main id="main" class="doc">
+  <main id="main" class="doc guide">
     <article>
       <h1>Attributes</h1>
       <p>Eight attributes, each from 0 to 100. This page says what each one actually changes in DFO, read from the game's own code. An attribute only matters where a formula reads it, and some read none: picking locks and pockets, and a spell's cost and power, use no attribute at all.</p>
@@ -55,70 +55,90 @@
         <li><strong>Luck, for everyone. More than expected.</strong> At 75 or more your criticals come a third more often (skill/3 instead of skill/4), and loot reads Luck too: rare finds from half as likely at 0 to half again at 100, and better metal. It also counts a tenth of the gap to hit, both ways.</li>
       </ul>
 
-      <h2 id="attribute-strength">Strength</h2>
-      <ul>
-        <li><strong>Carrying:</strong> you can carry Strength × 1.5 kilograms, and the game will not let you pick up more.</li>
-        <li><strong>Heavy loads:</strong> with the Roleplay &amp; Realism mod, on by default, a load past three quarters of that slows you and drains fatigue.</li>
-        <li><strong>Damage:</strong> (Strength − 50)/10 is added to every blow, from −5 to +5, and twice that with a two-handed weapon other than a bow. Under Daggerfall Unity's rules it is (Strength − 50)/5, with nothing doubled.</li>
-        <li><strong>Swing speed:</strong> a heavy weapon swings slower, and Strength takes the weight off. This is DFO's own rule.</li>
-        <li><strong>Fatigue:</strong> your maximum fatigue grows with Strength + Endurance.</li>
-        <li><strong>Default combat rules also:</strong> above 50, Strength lowers the damage you take a little and helps your shield block.</li>
-      </ul>
+      <section class="panel" aria-labelledby="the-eight">
+        <h2 id="the-eight">The eight attributes</h2>
+        <div class="rule"><i class="gem"></i></div>
+        <div class="card">
+          <h3 id="attribute-strength">Strength</h3>
+          <ul>
+            <li><strong>Carrying:</strong> you can carry Strength × 1.5 kilograms, and the game will not let you pick up more.</li>
+            <li><strong>Heavy loads:</strong> with the Roleplay &amp; Realism mod, on by default, a load past three quarters of that slows you and drains fatigue.</li>
+            <li><strong>Damage:</strong> (Strength − 50)/10 is added to every blow, from −5 to +5, and twice that with a two-handed weapon other than a bow. Under Daggerfall Unity's rules it is (Strength − 50)/5, with nothing doubled.</li>
+            <li><strong>Swing speed:</strong> a heavy weapon swings slower, and Strength takes the weight off. This is DFO's own rule.</li>
+            <li><strong>Fatigue:</strong> your maximum fatigue grows with Strength + Endurance.</li>
+            <li><strong>Default combat rules also:</strong> above 50, Strength lowers the damage you take a little and helps your shield block.</li>
+          </ul>
+        </div>
 
-      <h2 id="attribute-intelligence">Intelligence</h2>
-      <ul>
-        <li><strong>Spell points:</strong> your maximum is Intelligence × your class's multiplier, from 0.5 to 3. A Fortify or Drain Intelligence changes it at once.</li>
-        <li>It does not change what a spell costs or how strong it is. Those come from the school's skill and your level.</li>
-      </ul>
+        <div class="card">
+          <h3 id="attribute-intelligence">Intelligence</h3>
+          <ul>
+            <li><strong>Spell points:</strong> your maximum is Intelligence × your class's multiplier, from 0.5 to 3. A Fortify or Drain Intelligence changes it at once.</li>
+            <li>It does not change what a spell costs or how strong it is. Those come from the school's skill and your level.</li>
+          </ul>
+        </div>
 
-      <h2 id="attribute-willpower">Willpower</h2>
-      <ul>
-        <li><strong>Resisting magic:</strong> Willpower/10 is added to every saving throw you make against a spell. The throw is held between 5% and 95%.</li>
-        <li><strong>Default combat rules also:</strong> above 50, Willpower lowers the damage you take a little and helps your shield block, and with a class bonus against a kind of foe it widens that bonus.</li>
-      </ul>
+        <div class="card">
+          <h3 id="attribute-willpower">Willpower</h3>
+          <ul>
+            <li><strong>Resisting magic:</strong> Willpower/10 is added to every saving throw you make against a spell. The throw is held between 5% and 95%.</li>
+            <li><strong>Default combat rules also:</strong> above 50, Willpower lowers the damage you take a little and helps your shield block, and with a class bonus against a kind of foe it widens that bonus.</li>
+          </ul>
+        </div>
 
-      <h2 id="attribute-agility">Agility</h2>
-      <ul>
-        <li><strong>Hitting and being hit:</strong> (your Agility − your foe's)/4 is added to your chance to hit, and your foe's chance to hit you counts it the other way. Under Daggerfall Unity's rules it is /10. Every chance is held between 3% and 97%.</li>
-        <li><strong>Two weapons:</strong> with a weapon in each hand, the off hand is −5 to hit at Agility 50, a point better or worse per 10 Agility.</li>
-        <li><strong>Default combat rules also:</strong> Agility helps your shield block, and builds most of the bonus a class gets from its weapon expertise.</li>
-      </ul>
+        <div class="card">
+          <h3 id="attribute-agility">Agility</h3>
+          <ul>
+            <li><strong>Hitting and being hit:</strong> (your Agility − your foe's)/4 is added to your chance to hit, and your foe's chance to hit you counts it the other way. Under Daggerfall Unity's rules it is /10. Every chance is held between 3% and 97%.</li>
+            <li><strong>Two weapons:</strong> with a weapon in each hand, the off hand is −5 to hit at Agility 50, a point better or worse per 10 Agility.</li>
+            <li><strong>Default combat rules also:</strong> Agility helps your shield block, and builds most of the bonus a class gets from its weapon expertise.</li>
+          </ul>
+        </div>
 
-      <h2 id="attribute-endurance">Endurance</h2>
-      <ul>
-        <li><strong>Health:</strong> each level adds a roll of half to all of your class's hit points per level, plus Endurance/10 − 5, at least 1. The level-up reads Endurance without its Fortify. Online, your maximum health never falls below what your current Endurance would have given every level, so raising it later counts back.</li>
-        <li><strong>Resting:</strong> each hour of rest heals Endurance/10 − 5 more (see <a href="../guide/skills.html#skill-medical">Medical</a>).</li>
-        <li><strong>Fatigue and breath:</strong> maximum fatigue grows with Strength + Endurance, and your maximum breath under water is Endurance/2.</li>
-        <li><strong>Default combat rules also:</strong> above 50, Endurance lowers the damage you take, twice as much as Strength or Willpower, and helps your shield block.</li>
-        <li><strong>Survival:</strong> Endurance sets how much drink you can take before it tells, and how much heat or cold before bare feet cost you.</li>
-      </ul>
+        <div class="card">
+          <h3 id="attribute-endurance">Endurance</h3>
+          <ul>
+            <li><strong>Health:</strong> each level adds a roll of half to all of your class's hit points per level, plus Endurance/10 − 5, at least 1. The level-up reads Endurance without its Fortify. Online, your maximum health never falls below what your current Endurance would have given every level, so raising it later counts back.</li>
+            <li><strong>Resting:</strong> each hour of rest heals Endurance/10 − 5 more (see <a href="../guide/skills.html#skill-medical">Medical</a>).</li>
+            <li><strong>Fatigue and breath:</strong> maximum fatigue grows with Strength + Endurance, and your maximum breath under water is Endurance/2.</li>
+            <li><strong>Default combat rules also:</strong> above 50, Endurance lowers the damage you take, twice as much as Strength or Willpower, and helps your shield block.</li>
+            <li><strong>Survival:</strong> Endurance sets how much drink you can take before it tells, and how much heat or cold before bare feet cost you.</li>
+          </ul>
+        </div>
 
-      <h2 id="attribute-personality">Personality</h2>
-      <ul>
-        <li><strong>Prices:</strong> with <a href="../guide/skills.html#skill-mercantile">Mercantile</a>, Personality haggles every price. It is about a quarter of the haggle when buying and a fifth when selling.</li>
-        <li><strong>Talk:</strong> how a person takes you starts at Personality/5, and decides whether they answer and how well.</li>
-        <li><strong>Court:</strong> a plea succeeds at your legal reputation + (Etiquette or Streetwise + Personality)/2.</li>
-        <li><strong>Calming foes:</strong> Personality/10 is added when you speak a creature's language, and Personality/5 when you use Etiquette or Streetwise.</li>
-        <li><strong>In DFO:</strong> online, Personality counts up to 100 at most in a haggle.</li>
-      </ul>
+        <div class="card">
+          <h3 id="attribute-personality">Personality</h3>
+          <ul>
+            <li><strong>Prices:</strong> with <a href="../guide/skills.html#skill-mercantile">Mercantile</a>, Personality haggles every price. It is about a quarter of the haggle when buying and a fifth when selling.</li>
+            <li><strong>Talk:</strong> how a person takes you starts at Personality/5, and decides whether they answer and how well.</li>
+            <li><strong>Court:</strong> a plea succeeds at your legal reputation + (Etiquette or Streetwise + Personality)/2.</li>
+            <li><strong>Calming foes:</strong> Personality/10 is added when you speak a creature's language, and Personality/5 when you use Etiquette or Streetwise.</li>
+            <li><strong>In DFO:</strong> online, Personality counts up to 100 at most in a haggle.</li>
+          </ul>
+        </div>
 
-      <h2 id="attribute-speed">Speed</h2>
-      <ul>
-        <li><strong>Movement:</strong> walking, running, crouching and riding all start from your Speed. Running adds your <a href="../guide/skills.html#skill-running">Running</a> skill on top.</li>
-        <li><strong>Swinging:</strong> at Speed 100 you swing 1.67 times as often as at 50. This is DFO's own rule.</li>
-        <li><strong>Casting:</strong> spells cast up to a quarter faster at 100, and a quarter slower at 0. This is DFO's own rule.</li>
-        <li><strong>Default combat rules also:</strong> (your Speed − your foe's)/8 is added to your chance to hit, and Speed helps your shield block. Under Daggerfall Unity's rules Speed does not touch the hit.</li>
-      </ul>
+        <div class="card">
+          <h3 id="attribute-speed">Speed</h3>
+          <ul>
+            <li><strong>Movement:</strong> walking, running, crouching and riding all start from your Speed. Running adds your <a href="../guide/skills.html#skill-running">Running</a> skill on top.</li>
+            <li><strong>Swinging:</strong> at Speed 100 you swing 1.67 times as often as at 50. This is DFO's own rule.</li>
+            <li><strong>Casting:</strong> spells cast up to a quarter faster at 100, and a quarter slower at 0. This is DFO's own rule.</li>
+            <li><strong>Default combat rules also:</strong> (your Speed − your foe's)/8 is added to your chance to hit, and Speed helps your shield block. Under Daggerfall Unity's rules Speed does not touch the hit.</li>
+          </ul>
+        </div>
 
-      <h2 id="attribute-luck">Luck</h2>
-      <ul>
-        <li><strong>Hitting and being hit:</strong> (your Luck − your foe's)/10 is added to your chance to hit, both ways. Under the default rules, Luck above 50 also makes you harder to hit.</li>
-        <li><strong>Critical strikes:</strong> better Luck makes them likelier (see <a href="../guide/skills.html#skill-critical-strike">Critical Strike</a>).</li>
-        <li><strong>Climbing:</strong> up to +10 to every climbing check.</li>
-        <li><strong>Loot:</strong> Luck scales the odds of a rare find, from half as likely at Luck 0 to half again at 100, and lifts the metal that found weapons and armor are made of.</li>
-        <li><strong>Food:</strong> with survival on, raw or spoiled food makes you sick unless you pass a roll against your Luck.</li>
-        <li>Luck acts only where it is named here. It is not spread across every roll.</li>
-      </ul>
+        <div class="card">
+          <h3 id="attribute-luck">Luck</h3>
+          <ul>
+            <li><strong>Hitting and being hit:</strong> (your Luck − your foe's)/10 is added to your chance to hit, both ways. Under the default rules, Luck above 50 also makes you harder to hit.</li>
+            <li><strong>Critical strikes:</strong> better Luck makes them likelier (see <a href="../guide/skills.html#skill-critical-strike">Critical Strike</a>).</li>
+            <li><strong>Climbing:</strong> up to +10 to every climbing check.</li>
+            <li><strong>Loot:</strong> Luck scales the odds of a rare find, from half as likely at Luck 0 to half again at 100, and lifts the metal that found weapons and armor are made of.</li>
+            <li><strong>Food:</strong> with survival on, raw or spoiled food makes you sick unless you pass a roll against your Luck.</li>
+            <li>Luck acts only where it is named here. It is not spread across every roll.</li>
+          </ul>
+        </div>
+      </section>
     </article>
   </main>
 </body>

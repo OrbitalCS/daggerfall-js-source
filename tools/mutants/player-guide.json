@@ -248,5 +248,37 @@
       "test/ui/enhanced/playerguide1.test.js"
     ],
     "note": "An undressed page reads var() as nothing."
+  },
+  {
+    "name": "PLAYER-GUIDE-STYLE-scope-dropped",
+    "file": "guide/races.html",
+    "old": "<main id=\"main\" class=\"doc guide\">",
+    "new": "<main id=\"main\" class=\"doc\">",
+    "tests": [
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "Without the class the guide's own rules never reach the page, and nothing else would say so."
+  },
+  {
+    "name": "PLAYER-GUIDE-STYLE-kit-on-every-document",
+    "file": "scripts/landingHtml.mjs",
+    "old": "GUIDE_PATHS.includes(ctx.path) ? { kit: GUIDE_KIT_CSS } : {}",
+    "new": "{ kit: GUIDE_KIT_CSS }",
+    "tests": [
+      "test/ui/enhanced/terms1.test.js",
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "The Terms and the Privacy Policy stay plain; the stone is the guide's alone."
+  },
+  {
+    "name": "PLAYER-GUIDE-STYLE-guide-loses-the-kit",
+    "file": "scripts/landingHtml.mjs",
+    "old": "GUIDE_PATHS.includes(ctx.path) ? { kit: GUIDE_KIT_CSS } : {}",
+    "new": "{}",
+    "tests": [
+      "test/ui/enhanced/terms1.test.js",
+      "test/ui/enhanced/playerguide1.test.js"
+    ],
+    "note": "The guide's panels and cards are shapes without it - its stone and brass are the kit's."
   }
 ]

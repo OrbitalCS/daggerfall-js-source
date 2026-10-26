@@ -18,7 +18,7 @@ import { execFileSync } from 'node:child_process';
 import { ENHANCED_TOKENS, ENHANCED_FONTS_URL } from '../src/ui/enhanced/enhancedStyle.js';
 import { PIXELIFY_FIVE_FACE } from '../src/ui/pixelifyFive.js';   // TERMS1: the documents take the five from its home
 import { SUPPORT_MARKS_CSS } from '../src/ui/supportAsks.js';   // SUPPORT1: the asks' marks, the game door's own pixels
-import { SITE_KIT_CSS } from '../src/ui/enhanced/enhancedFrame.js';   // PLUS-SITE: the game's stone and brass, cut without a picture
+import { SITE_KIT_CSS, siteKitCss } from '../src/ui/enhanced/enhancedFrame.js';   // PLUS-SITE: the game's stone and brass, cut without a picture; PLAYER-GUIDE-STYLE: the guide's own cut of it
 
 /** U63: the landing page asks for THE SKIN'S OWN REQUEST, not a subset.
  *  It used to load the brand + data faces, because the site was set in
@@ -260,16 +260,67 @@ a:hover, a:focus-visible { outline: none; color: rgb(243,239,44); border-color: 
 .doc ul { margin: 0 0 12px; padding-left: 24px; }
 .doc li { margin: 0 0 6px; }
 .doc strong { font-weight: 500; }
+/* PLAYER-GUIDE-STYLE: the guide's pages alone (<main class="doc guide">), so the Terms and the Privacy Policy stay
+   plain. The landing page's own shapes, value for value (index.html: main > section, .cols > div, .steps/.step,
+   .qa, .doorlinks, .rule, .gem, and its 860px step-down): the page gives each box its edge and room, and the stone and
+   brass are the kit's (GUIDE_KIT_CSS below, injected on the guide's pages alone) - the landing page's own division.
+   No night sky: the documents' quiet ground stays. */
+.guide h3 { font-weight: 400; margin: 0; text-shadow: 4px 4px 0 rgba(0,0,0,0.7); }
+.guide .panel { position: relative; border: 4px solid; padding: 0 30px 34px; margin: 0 0 44px; text-align: center; }
+.guide .panel > h2 { font-size: clamp(36px, 5vw, 52px); line-height: 1; margin: 0 -30px; padding: 24px 16px 20px; color: #d8cfae; }
+.guide .panel > .rule { margin: 18px auto 26px; }
+.guide .panel > ul, .guide .panel > ol { text-align: left; }
+.guide .card { border: 2px solid; padding: 16px 18px 4px; margin: 0 0 12px; text-align: left; }
+.guide .card h3 { font-size: 24px; margin-bottom: 6px; }
+.guide .steps { list-style: none; margin: 0 auto; padding: 0; counter-reset: step; text-align: left; max-width: 64ch; }
+.guide .step { display: grid; grid-template-columns: 54px 1fr; gap: 0 18px; padding: 16px 18px 4px; margin: 0 0 12px; border: 2px solid; }
+.guide .step::before { counter-increment: step; content: counter(step); display: flex; align-items: center; justify-content: center;
+  width: 54px; height: 54px; border: 2px solid; font-size: 36px; line-height: 1; color: var(--brass); text-shadow: 2px 2px 0 rgba(0,0,0,0.8); }
+.guide .qa { display: flex; flex-direction: column; gap: 12px; text-align: left; margin: 24px 0 0; }
+.guide .qa > div { display: grid; grid-template-columns: 220px 1fr; gap: 6px 24px; padding: 16px 18px; border: 2px solid; }
+.guide .qa dt { font-size: 24px; line-height: 1.1; text-shadow: 2px 2px 0 rgba(0,0,0,0.7); }
+.guide .qa dd { margin: 0; color: #a89f88; font-size: 15px; }
+.guide .doorlinks { margin-top: 28px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.guide .doorlinks a { justify-content: center; text-align: center; }
+.guide .doorlinks a, .guide a[download] { display: inline-flex; align-items: center; min-height: 44px; padding: 6px 14px; border: 2px solid; color: #d8cfae; }
+.guide .rule { display: flex; align-items: center; gap: 16px; width: min(420px, 70vw); margin: 30px auto 32px; }
+.guide .rule::before, .guide .rule::after { content: ''; flex: 1; height: 2px; background: #7d7460; opacity: 0.55; }
+.guide .gem {
+  position: relative; width: 2px; height: 2px; background: var(--ruby);
+  box-shadow:
+    0 -4px 0 var(--brass), 0 4px 0 var(--brass), -4px 0 0 var(--brass), 4px 0 0 var(--brass),
+    -2px -2px 0 var(--ruby), 2px -2px 0 var(--ruby), -2px 2px 0 var(--ruby), 2px 2px 0 var(--ruby);
+}
+@media (max-width: 600px) { .guide .doorlinks { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 860px) {
+  .guide .panel { padding: 0 16px 24px; }
+  .guide .panel > h2 { margin: 0 -16px; }
+  .guide .step { grid-template-columns: 44px 1fr; gap: 0 14px; padding: 14px 14px 4px; }
+  .guide .step::before { width: 44px; height: 44px; font-size: 28px; }
+  .guide .qa > div { grid-template-columns: 1fr; }
+}
 `;
+
+/** PLAYER-GUIDE-STYLE: the guide's pages - the documents that also wear the landing page's stone and brass. */
+export const GUIDE_PATHS = Object.freeze(DOCUMENT_PATHS.filter((p) => p.startsWith('/guide/')));
+/** The landing page's kit, cut for the guide's boxes: a framed panel is a window, its heading the band, a card or a
+ *  step a panel, a link button pressable, a step's numeral a well. The same generator and tones as the site and the
+ *  game, so the three cannot carve two stones. */
+export const GUIDE_KIT_CSS = siteKitCss({
+  window: ['.guide .panel'], header: ['.guide .panel > h2'], panel: ['.guide .card', '.guide .step', '.guide .qa > div'],
+  button: ['.guide .doorlinks a', '.guide a[download]'], primary: [], well: ['.guide .step::before'],
+});
 
 /** A document's head: the skin's tokens, the five, the documents' rules,
  *  then what every page takes. The page itself is not rewritten. */
-export function transformDocument(html, { tokens = ENHANCED_TOKENS, fonts = LANDING_FONTS_URL } = {}) {
+export function transformDocument(html, { tokens = ENHANCED_TOKENS, fonts = LANDING_FONTS_URL, kit = null } = {}) {
   return {
     html,
     tags: [
       { tag: 'style', attrs: { id: 'enhanced-tokens' }, children: tokens, injectTo: 'head-prepend' },
       { tag: 'style', attrs: { id: 'document-style' }, children: `${PIXELIFY_FIVE_FACE}\n${DOCUMENT_CSS}`, injectTo: 'head' },
+      // PLAYER-GUIDE-STYLE: the guide's pages alone - after the document's rules, as the landing page's kit is after its sheet
+      ...(kit ? [{ tag: 'style', attrs: { id: 'guide-kit' }, children: kit, injectTo: 'head' }] : []),
       ...skinTags(tokens, fonts),
     ],
   };
@@ -282,7 +333,7 @@ export function landingHtml() {
       order: 'pre',
       handler(html, ctx) {
         if (ctx.path === GAME_PATH) return { html, tags: [iconTag()].filter(Boolean) };   // the tab's mark, nothing else
-        if (DOCUMENT_PATHS.includes(ctx.path)) return transformDocument(html);   // TERMS1: the Terms and the Privacy Policy
+        if (DOCUMENT_PATHS.includes(ctx.path)) return transformDocument(html, GUIDE_PATHS.includes(ctx.path) ? { kit: GUIDE_KIT_CSS } : {});   // TERMS1: the Terms and the Privacy Policy; PLAYER-GUIDE-STYLE: the guide's stone
         if (ctx.path !== LANDING_PATH) return html;
         // BUILD ONLY for the stamp, as build-tag-meta is: on a dev serve
         // src/buildTag.js holds whatever the last build left behind, and

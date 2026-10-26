@@ -29,12 +29,13 @@
       <a href="../guide/custom-classes.html">Custom classes</a>
     </nav>
   </header>
-  <main id="main" class="doc">
+  <main id="main" class="doc guide">
     <article>
       <h1>Skills</h1>
       <p>DFO Online has Daggerfall's 35 skills. This page says what each one does in this game, read from the game's own code. Where DFO plays differently from Daggerfall Unity, the entry says so.</p>
 
-      <p>The skill groups: <a href="#combat">Combat</a> · <a href="#magic">Magic</a> · <a href="#stealth">Stealth and theft</a> · <a href="#movement">Movement</a> · <a href="#speech">Speech and trade</a> · <a href="#languages">Languages</a> · <a href="#healing">Healing</a></p>
+      <p>The skill groups:</p>
+      <nav class="doorlinks" aria-label="Skill groups"><a href="#combat">Combat</a><a href="#magic">Magic</a><a href="#stealth">Stealth and theft</a><a href="#movement">Movement</a><a href="#speech">Speech and trade</a><a href="#languages">Languages</a><a href="#healing">Healing</a></nav>
 
       <h2 id="governing">The governing attribute</h2>
       <p>Daggerfall showed a governing attribute beside each skill, and no formula in DFO reads one.</p>
@@ -58,250 +59,342 @@
         <li>Past 100, a combat or magic skill only learns from foes that are tough for it. Running, Jumping, Swimming and Climbing only learn from ground you really cover. The rest learn as before, but not from repeating the same thing over and over.</li>
       </ul>
 
-      <h2 id="combat">Combat</h2>
-      <p>DFO's default combat rules are the Physical Combat and Armor Overhaul mod's, which ship turned on, and online they are always on. Offline you can turn them off and play by Daggerfall Unity's rules. Under the default rules, armor lowers the damage a blow does instead of the chance to land it.</p>
+      <section class="panel" aria-labelledby="combat">
+        <h2 id="combat">Combat</h2>
+        <div class="rule"><i class="gem"></i></div>
+        <p>DFO's default combat rules are the Physical Combat and Armor Overhaul mod's, which ship turned on, and online they are always on. Offline you can turn them off and play by Daggerfall Unity's rules. Under the default rules, armor lowers the damage a blow does instead of the chance to land it.</p>
 
-      <p id="skill-short-blade"><strong>Short Blade</strong> · multiplier 2</p>
-      <ul>
-        <li><strong>Weapons:</strong> dagger, tanto, wakazashi, shortsword.</li>
-        <li><strong>Does:</strong> sets your chance to hit. Your chance starts at the skill × 1.5 (× 1 under Daggerfall Unity's rules). The skill does not change damage.</li>
-        <li><strong>Advances:</strong> one use for every swing that reaches an enemy, hit or miss.</li>
-        <li><strong>In DFO:</strong> online, past 100, swings get up to 40% quicker.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-short-blade"><strong>Short Blade</strong> · multiplier 2</p>
+          <ul>
+            <li><strong>Weapons:</strong> dagger, tanto, wakazashi, shortsword.</li>
+            <li><strong>Does:</strong> sets your chance to hit. Your chance starts at the skill × 1.5 (× 1 under Daggerfall Unity's rules). The skill does not change damage.</li>
+            <li><strong>Advances:</strong> one use for every swing that reaches an enemy, hit or miss.</li>
+            <li><strong>In DFO:</strong> online, past 100, swings get up to 40% quicker.</li>
+          </ul>
+        </div>
 
-      <p id="skill-long-blade"><strong>Long Blade</strong> · multiplier 2</p>
-      <ul>
-        <li><strong>Weapons:</strong> broadsword, longsword, saber, katana, claymore, dai-katana.</li>
-        <li><strong>Does:</strong> sets your chance to hit, as Short Blade does. Under the default rules, two-handed blades double the Strength bonus to damage.</li>
-        <li><strong>Advances:</strong> one use for every swing that reaches an enemy, hit or miss.</li>
-        <li><strong>In DFO:</strong> online, past 100, blows hit up to 40% harder.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-long-blade"><strong>Long Blade</strong> · multiplier 2</p>
+          <ul>
+            <li><strong>Weapons:</strong> broadsword, longsword, saber, katana, claymore, dai-katana.</li>
+            <li><strong>Does:</strong> sets your chance to hit, as Short Blade does. Under the default rules, two-handed blades double the Strength bonus to damage.</li>
+            <li><strong>Advances:</strong> one use for every swing that reaches an enemy, hit or miss.</li>
+            <li><strong>In DFO:</strong> online, past 100, blows hit up to 40% harder.</li>
+          </ul>
+        </div>
 
-      <p id="skill-axe"><strong>Axe</strong> · multiplier 2</p>
-      <ul>
-        <li><strong>Weapons:</strong> battle axe, war axe.</li>
-        <li><strong>Does:</strong> sets your chance to hit. Under the default rules, two-handed axes double the Strength bonus to damage.</li>
-        <li><strong>Advances:</strong> one use for every swing that reaches an enemy, hit or miss.</li>
-        <li><strong>In DFO:</strong> online, past 100, blows at a foe under half health hit up to 80% harder.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-axe"><strong>Axe</strong> · multiplier 2</p>
+          <ul>
+            <li><strong>Weapons:</strong> battle axe, war axe.</li>
+            <li><strong>Does:</strong> sets your chance to hit. Under the default rules, two-handed axes double the Strength bonus to damage.</li>
+            <li><strong>Advances:</strong> one use for every swing that reaches an enemy, hit or miss.</li>
+            <li><strong>In DFO:</strong> online, past 100, blows at a foe under half health hit up to 80% harder.</li>
+          </ul>
+        </div>
 
-      <p id="skill-blunt-weapon"><strong>Blunt Weapon</strong> · multiplier 2</p>
-      <ul>
-        <li><strong>Weapons:</strong> staff, mace, flail, warhammer.</li>
-        <li><strong>Does:</strong> sets your chance to hit. Under the default rules, armor and some creatures take blunt blows differently from edged ones. A Skeletal Warrior takes half damage from anything that is not blunt.</li>
-        <li><strong>Advances:</strong> one use for every swing that reaches an enemy, hit or miss.</li>
-        <li><strong>In DFO:</strong> online, past 100, blows at a foe at half health or more hit up to 80% harder.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-blunt-weapon"><strong>Blunt Weapon</strong> · multiplier 2</p>
+          <ul>
+            <li><strong>Weapons:</strong> staff, mace, flail, warhammer.</li>
+            <li><strong>Does:</strong> sets your chance to hit. Under the default rules, armor and some creatures take blunt blows differently from edged ones. A Skeletal Warrior takes half damage from anything that is not blunt.</li>
+            <li><strong>Advances:</strong> one use for every swing that reaches an enemy, hit or miss.</li>
+            <li><strong>In DFO:</strong> online, past 100, blows at a foe at half health or more hit up to 80% harder.</li>
+          </ul>
+        </div>
 
-      <p id="skill-hand-to-hand"><strong>Hand-to-Hand</strong> · multiplier 2</p>
-      <ul>
-        <li><strong>Used:</strong> with nothing in your hands, and for a werewolf's claws.</li>
-        <li><strong>Does:</strong> sets your chance to hit, and it is the one skill that sets damage. A punch does skill/10 + 1 to skill/5 + 1, plus your Strength bonus: 11 to 21 at 100.</li>
-        <li><strong>Advances:</strong> one use for every punch that reaches an enemy, hit or miss.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-hand-to-hand"><strong>Hand-to-Hand</strong> · multiplier 2</p>
+          <ul>
+            <li><strong>Used:</strong> with nothing in your hands, and for a werewolf's claws.</li>
+            <li><strong>Does:</strong> sets your chance to hit, and it is the one skill that sets damage. A punch does skill/10 + 1 to skill/5 + 1, plus your Strength bonus: 11 to 21 at 100.</li>
+            <li><strong>Advances:</strong> one use for every punch that reaches an enemy, hit or miss.</li>
+          </ul>
+        </div>
 
-      <p id="skill-archery"><strong>Archery</strong> · multiplier 1</p>
-      <ul>
-        <li><strong>Weapons:</strong> short bow, long bow, and DFO's own firearms.</li>
-        <li><strong>Does:</strong> sets your chance to hit with a shot. Bows never double the Strength bonus.</li>
-        <li><strong>Draw time:</strong> with the Roleplay &amp; Realism mod's archery, on by default, how long you hold the draw matters. Under 0.2 seconds is −40 to hit, 1 to 2 seconds is +10, and past 5 seconds is −10. Damage is full from 0.8 to 5 seconds and falls off either side, to a quarter after 9 seconds.</li>
-        <li><strong>Advances:</strong> one use for every shot you loose, hit or miss.</li>
-        <li><strong>In DFO:</strong> online, past 100, shots hit up to 40% harder.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-archery"><strong>Archery</strong> · multiplier 1</p>
+          <ul>
+            <li><strong>Weapons:</strong> short bow, long bow, and DFO's own firearms.</li>
+            <li><strong>Does:</strong> sets your chance to hit with a shot. Bows never double the Strength bonus.</li>
+            <li><strong>Draw time:</strong> with the Roleplay &amp; Realism mod's archery, on by default, how long you hold the draw matters. Under 0.2 seconds is −40 to hit, 1 to 2 seconds is +10, and past 5 seconds is −10. Damage is full from 0.8 to 5 seconds and falls off either side, to a quarter after 9 seconds.</li>
+            <li><strong>Advances:</strong> one use for every shot you loose, hit or miss.</li>
+            <li><strong>In DFO:</strong> online, past 100, shots hit up to 40% harder.</li>
+          </ul>
+        </div>
 
-      <p id="skill-critical-strike"><strong>Critical Strike</strong> · multiplier 8</p>
-      <ul>
-        <li><strong>Does (default rules):</strong> each attack has a chance of skill/4 percent to be a critical at Luck 50 to 74. Better Luck divides by less (skill/3 from 75, skill/2 at 100), worse Luck by more (skill/5 under 50, skill/6 under 25). A critical adds skill/4 to hit and multiplies damage by 1 + 0.05 for every 5 points of skill: double at 100.</li>
-        <li><strong>Under Daggerfall Unity's rules:</strong> a skill-percent roll adds skill/10 to hit, and nothing to damage.</li>
-        <li><strong>Reads:</strong> Luck.</li>
-        <li><strong>Advances:</strong> one use with every swing that reaches an enemy and every shot you loose, beside the weapon's own skill.</li>
-        <li><strong>In DFO:</strong> enemies roll their criticals the same way you do.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-critical-strike"><strong>Critical Strike</strong> · multiplier 8</p>
+          <ul>
+            <li><strong>Does (default rules):</strong> each attack has a chance of skill/4 percent to be a critical at Luck 50 to 74. Better Luck divides by less (skill/3 from 75, skill/2 at 100), worse Luck by more (skill/5 under 50, skill/6 under 25). A critical adds skill/4 to hit and multiplies damage by 1 + 0.05 for every 5 points of skill: double at 100.</li>
+            <li><strong>Under Daggerfall Unity's rules:</strong> a skill-percent roll adds skill/10 to hit, and nothing to damage.</li>
+            <li><strong>Reads:</strong> Luck.</li>
+            <li><strong>Advances:</strong> one use with every swing that reaches an enemy and every shot you loose, beside the weapon's own skill.</li>
+            <li><strong>In DFO:</strong> enemies roll their criticals the same way you do.</li>
+          </ul>
+        </div>
 
-      <p id="skill-backstabbing"><strong>Backstabbing</strong> · multiplier 1</p>
-      <ul>
-        <li><strong>Does:</strong> against a foe facing away from you, the skill is added to your chance to hit. If you hit, a skill-percent roll triples the damage ("Successful backstab!"). It works with blades, fists and arrows.</li>
-        <li><strong>Advances:</strong> one use for every attack at a foe facing away, whether or not it hits.</li>
-        <li><strong>In DFO:</strong> no backstab against another player.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-backstabbing"><strong>Backstabbing</strong> · multiplier 1</p>
+          <ul>
+            <li><strong>Does:</strong> against a foe facing away from you, the skill is added to your chance to hit. If you hit, a skill-percent roll triples the damage ("Successful backstab!"). It works with blades, fists and arrows.</li>
+            <li><strong>Advances:</strong> one use for every attack at a foe facing away, whether or not it hits.</li>
+            <li><strong>In DFO:</strong> no backstab against another player.</li>
+          </ul>
+        </div>
 
-      <p id="skill-dodging"><strong>Dodging</strong> · multiplier 4</p>
-      <ul>
-        <li><strong>Does:</strong> takes half its value off an enemy's chance to hit you (a quarter under Daggerfall Unity's rules). It has no dodge move or roll of its own.</li>
-        <li><strong>Advances:</strong> one use for every enemy blow that reaches you and every arrow that reaches you, hit or miss.</li>
-        <li><strong>In DFO:</strong> not used when another player attacks you.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-dodging"><strong>Dodging</strong> · multiplier 4</p>
+          <ul>
+            <li><strong>Does:</strong> takes half its value off an enemy's chance to hit you (a quarter under Daggerfall Unity's rules). It has no dodge move or roll of its own.</li>
+            <li><strong>Advances:</strong> one use for every enemy blow that reaches you and every arrow that reaches you, hit or miss.</li>
+            <li><strong>In DFO:</strong> not used when another player attacks you.</li>
+          </ul>
+        </div>
+      </section>
 
-      <h2 id="magic">Magic</h2>
-      <p>Every spell effect belongs to one school. A school's skill makes the spells of that school cheaper. It does not change a spell's chance, power or duration below 100; those come from your level.</p>
-      <ul>
-        <li><strong>Cost:</strong> each effect costs its price × (110 − skill) / 400 in spell points, priced by its own school. Spells cast at range cost 1.5 times, an area around you 2 times, and an area at range 2.5 times. No spell costs less than 5.</li>
-        <li><strong>Advances:</strong> every cast counts one use for the school of each effect in the spell.</li>
-        <li><strong>Starting spells:</strong> a custom class with a school among its primary or major skills starts with the Spellsword's spells.</li>
-        <li><strong>In DFO:</strong> online, past 100, spells keep getting cheaper but are never free, and each school gains up to 40% in its own way, listed below. Master two schools and you can follow one of fifteen two-school Arcane Paths.</li>
-      </ul>
+      <section class="panel" aria-labelledby="magic">
+        <h2 id="magic">Magic</h2>
+        <div class="rule"><i class="gem"></i></div>
+        <p>Every spell effect belongs to one school. A school's skill makes the spells of that school cheaper. It does not change a spell's chance, power or duration below 100; those come from your level.</p>
+        <ul>
+          <li><strong>Cost:</strong> each effect costs its price × (110 − skill) / 400 in spell points, priced by its own school. Spells cast at range cost 1.5 times, an area around you 2 times, and an area at range 2.5 times. No spell costs less than 5.</li>
+          <li><strong>Advances:</strong> every cast counts one use for the school of each effect in the spell.</li>
+          <li><strong>Starting spells:</strong> a custom class with a school among its primary or major skills starts with the Spellsword's spells.</li>
+          <li><strong>In DFO:</strong> online, past 100, spells keep getting cheaper but are never free, and each school gains up to 40% in its own way, listed below. Master two schools and you can follow one of fifteen two-school Arcane Paths.</li>
+        </ul>
 
-      <p id="skill-destruction"><strong>Destruction</strong> · multiplier 1</p>
-      <ul>
-        <li><strong>Effects:</strong> Damage and Continuous Damage (health, fatigue, spell points), Disintegrate, Drain, Transfer.</li>
-        <li>Only Destruction effects can be soaked up by Spell Absorption.</li>
-        <li><strong>In DFO:</strong> online, past 100, damage spells hit harder.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-destruction"><strong>Destruction</strong> · multiplier 1</p>
+          <ul>
+            <li><strong>Effects:</strong> Damage and Continuous Damage (health, fatigue, spell points), Disintegrate, Drain, Transfer.</li>
+            <li>Only Destruction effects can be soaked up by Spell Absorption.</li>
+            <li><strong>In DFO:</strong> online, past 100, damage spells hit harder.</li>
+          </ul>
+        </div>
 
-      <p id="skill-restoration"><strong>Restoration</strong> · multiplier 2</p>
-      <ul>
-        <li><strong>Effects:</strong> Heal, Fortify, Regenerate, Cure Disease, Poison and Paralyzation, Free Action, Spell Absorption, and DFO's own Resurrect.</li>
-        <li><strong>In DFO:</strong> online, past 100, Heal and Regenerate on yourself heal more. Spell Absorption's chance is capped at 50%, and an absorbed spell gives back half its points.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-restoration"><strong>Restoration</strong> · multiplier 2</p>
+          <ul>
+            <li><strong>Effects:</strong> Heal, Fortify, Regenerate, Cure Disease, Poison and Paralyzation, Free Action, Spell Absorption, and DFO's own Resurrect.</li>
+            <li><strong>In DFO:</strong> online, past 100, Heal and Regenerate on yourself heal more. Spell Absorption's chance is capped at 50%, and an absorbed spell gives back half its points.</li>
+          </ul>
+        </div>
 
-      <p id="skill-illusion"><strong>Illusion</strong> · multiplier 1</p>
-      <ul>
-        <li><strong>Effects:</strong> Invisibility, Chameleon, Shadow, Light, Morph Self.</li>
-        <li><strong>In DFO:</strong> online, past 100, concealment you cast on yourself lasts longer.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-illusion"><strong>Illusion</strong> · multiplier 1</p>
+          <ul>
+            <li><strong>Effects:</strong> Invisibility, Chameleon, Shadow, Light, Morph Self.</li>
+            <li><strong>In DFO:</strong> online, past 100, concealment you cast on yourself lasts longer.</li>
+          </ul>
+        </div>
 
-      <p id="skill-alteration"><strong>Alteration</strong> · multiplier 1</p>
-      <ul>
-        <li><strong>Effects:</strong> Shield, Paralyze, Elemental Resistance, Slowfall, Jumping, Climbing, Water Breathing.</li>
-        <li><strong>In DFO:</strong> online, past 100, a Shield on yourself holds more.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-alteration"><strong>Alteration</strong> · multiplier 1</p>
+          <ul>
+            <li><strong>Effects:</strong> Shield, Paralyze, Elemental Resistance, Slowfall, Jumping, Climbing, Water Breathing.</li>
+            <li><strong>In DFO:</strong> online, past 100, a Shield on yourself holds more.</li>
+          </ul>
+        </div>
 
-      <p id="skill-thaumaturgy"><strong>Thaumaturgy</strong> · multiplier 2</p>
-      <ul>
-        <li><strong>Effects:</strong> Levitate, Spell Reflection, Spell Resistance, Water Walking, Pacify, Charm, Detect, Identify.</li>
-        <li><strong>In DFO:</strong> online, past 100, wards on yourself are likelier to hold.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-thaumaturgy"><strong>Thaumaturgy</strong> · multiplier 2</p>
+          <ul>
+            <li><strong>Effects:</strong> Levitate, Spell Reflection, Spell Resistance, Water Walking, Pacify, Charm, Detect, Identify.</li>
+            <li><strong>In DFO:</strong> online, past 100, wards on yourself are likelier to hold.</li>
+          </ul>
+        </div>
 
-      <p id="skill-mysticism"><strong>Mysticism</strong> · multiplier 1</p>
-      <ul>
-        <li><strong>Effects:</strong> Soul Trap, Dispel, Silence, Lock, Open, Teleport, Create Item, Comprehend Languages, and DFO's own Shared Cartography.</li>
-        <li><strong>In DFO:</strong> online, past 100, its effects are likelier to take hold on a foe.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-mysticism"><strong>Mysticism</strong> · multiplier 1</p>
+          <ul>
+            <li><strong>Effects:</strong> Soul Trap, Dispel, Silence, Lock, Open, Teleport, Create Item, Comprehend Languages, and DFO's own Shared Cartography.</li>
+            <li><strong>In DFO:</strong> online, past 100, its effects are likelier to take hold on a foe.</li>
+          </ul>
+        </div>
+      </section>
 
-      <h2 id="stealth">Stealth and theft</h2>
+      <section class="panel" aria-labelledby="stealth">
+        <h2 id="stealth">Stealth and theft</h2>
+        <div class="rule"><i class="gem"></i></div>
 
-      <p id="skill-stealth"><strong>Stealth</strong> · multiplier 2</p>
-      <ul>
-        <li><strong>Does:</strong> when an enemy within about 25 metres can neither see nor hear you, it checks once a game minute whether it notices you anyway. The farther away you are and the higher your Stealth, the likelier you stay unnoticed. Being seen or heard gives you away whatever your Stealth.</li>
-        <li><strong>Advances:</strong> one use, at most once a game minute, whenever an enemy makes that check.</li>
-        <li><strong>In DFO:</strong> the same check decides whether wilderness foes notice you while you travel.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-stealth"><strong>Stealth</strong> · multiplier 2</p>
+          <ul>
+            <li><strong>Does:</strong> when an enemy within about 25 metres can neither see nor hear you, it checks once a game minute whether it notices you anyway. The farther away you are and the higher your Stealth, the likelier you stay unnoticed. Being seen or heard gives you away whatever your Stealth.</li>
+            <li><strong>Advances:</strong> one use, at most once a game minute, whenever an enemy makes that check.</li>
+            <li><strong>In DFO:</strong> the same check decides whether wilderness foes notice you while you travel.</li>
+          </ul>
+        </div>
 
-      <p id="skill-lockpicking"><strong>Lockpicking</strong> · multiplier 2</p>
-      <ul>
-        <li><strong>Does:</strong> picks locks in Steal mode, and no lockpick is needed. Inside, the chance is 5 × (your level − the lock) + skill. On a building's door it is skill − 5 × the lock. Either way the chance is held between 5% and 95%. A lock of 20 or more is magical and cannot be picked.</li>
-        <li><strong>Retrying:</strong> a lock you failed cannot be tried again until your skill has changed.</li>
-        <li><strong>Advances:</strong> one use per attempt, success or not.</li>
-        <li><strong>In DFO:</strong> locked chests and crates are DFO's own, and can be picked in Grab mode too.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-lockpicking"><strong>Lockpicking</strong> · multiplier 2</p>
+          <ul>
+            <li><strong>Does:</strong> picks locks in Steal mode, and no lockpick is needed. Inside, the chance is 5 × (your level − the lock) + skill. On a building's door it is skill − 5 × the lock. Either way the chance is held between 5% and 95%. A lock of 20 or more is magical and cannot be picked.</li>
+            <li><strong>Retrying:</strong> a lock you failed cannot be tried again until your skill has changed.</li>
+            <li><strong>Advances:</strong> one use per attempt, success or not.</li>
+            <li><strong>In DFO:</strong> locked chests and crates are DFO's own, and can be picked in Grab mode too.</li>
+          </ul>
+        </div>
 
-      <p id="skill-pickpocket"><strong>Pickpocket</strong> · multiplier 2</p>
-      <ul>
-        <li><strong>Does:</strong> picking a pocket succeeds at your skill percent (between 5% and 95%), plus 5 per level you have over an enemy. A success finds 1 to 6 gold two times in three. Failing on a townsperson is a crime; failing on an enemy turns it hostile.</li>
-        <li><strong>Shoplifting</strong> and taking from someone else's furniture: the chance of being seen is 100 − skill, plus the shop's quality and what you are taking.</li>
-        <li><strong>Advances:</strong> one use per pickpocket or shoplifting attempt, and per theft from furniture that you get away with.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-pickpocket"><strong>Pickpocket</strong> · multiplier 2</p>
+          <ul>
+            <li><strong>Does:</strong> picking a pocket succeeds at your skill percent (between 5% and 95%), plus 5 per level you have over an enemy. A success finds 1 to 6 gold two times in three. Failing on a townsperson is a crime; failing on an enemy turns it hostile.</li>
+            <li><strong>Shoplifting</strong> and taking from someone else's furniture: the chance of being seen is 100 − skill, plus the shop's quality and what you are taking.</li>
+            <li><strong>Advances:</strong> one use per pickpocket or shoplifting attempt, and per theft from furniture that you get away with.</li>
+          </ul>
+        </div>
+      </section>
 
-      <h2 id="movement">Movement</h2>
+      <section class="panel" aria-labelledby="movement">
+        <h2 id="movement">Movement</h2>
+        <div class="rule"><i class="gem"></i></div>
 
-      <p id="skill-running"><strong>Running</strong> · multiplier 50</p>
-      <ul>
-        <li><strong>Does:</strong> run speed rises with the skill: × (1.35 + skill/200) of a base set by your Speed.</li>
-        <li><strong>Reads:</strong> Speed.</li>
-        <li><strong>Advances:</strong> four uses a second while you hold Run.</li>
-        <li><strong>In DFO:</strong> past 100 the skill keeps adding speed, and only ground you cover counts as a use.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-running"><strong>Running</strong> · multiplier 50</p>
+          <ul>
+            <li><strong>Does:</strong> run speed rises with the skill: × (1.35 + skill/200) of a base set by your Speed.</li>
+            <li><strong>Reads:</strong> Speed.</li>
+            <li><strong>Advances:</strong> four uses a second while you hold Run.</li>
+            <li><strong>In DFO:</strong> past 100 the skill keeps adding speed, and only ground you cover counts as a use.</li>
+          </ul>
+        </div>
 
-      <p id="skill-jumping"><strong>Jumping</strong> · multiplier 5</p>
-      <ul>
-        <li><strong>Does:</strong> jump height × (1 + skill/200), so up to half as high again at 100. A Jumping spell adds 0.6, and the Athleticism advantage 0.1.</li>
-        <li><strong>Advances:</strong> one use per jump.</li>
-        <li><strong>In DFO:</strong> with Enhanced Climbing (always on online), Jumping also sets how far you leap, vault and push off a wall. A running leap goes 4 to 7 metres.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-jumping"><strong>Jumping</strong> · multiplier 5</p>
+          <ul>
+            <li><strong>Does:</strong> jump height × (1 + skill/200), so up to half as high again at 100. A Jumping spell adds 0.6, and the Athleticism advantage 0.1.</li>
+            <li><strong>Advances:</strong> one use per jump.</li>
+            <li><strong>In DFO:</strong> with Enhanced Climbing (always on online), Jumping also sets how far you leap, vault and push off a wall. A running leap goes 4 to 7 metres.</li>
+          </ul>
+        </div>
 
-      <p id="skill-climbing"><strong>Climbing</strong> · multiplier 2</p>
-      <ul>
-        <li><strong>Does (Daggerfall's climb):</strong> every check while you climb rolls against a chance that rises with the skill (held to 5–95), plus up to 10 from Luck. A Khajiit adds 30, and a Climbing spell doubles the skill.</li>
-        <li><strong>Reads:</strong> Luck.</li>
-        <li><strong>Does (Enhanced Climbing, DFO's own, always on online):</strong> the skill sets how high you can reach (1.5 to 2.1 metres), how long you can hang on (6 to 30 seconds), and how fast you shimmy, climb and pull yourself up.</li>
-        <li><strong>Advances:</strong> one use for each climbing check, about every 0.8 seconds on a wall, and one per mantle or ledge caught.</li>
-        <li><strong>In DFO:</strong> past 100 you climb faster, up to 40%.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-climbing"><strong>Climbing</strong> · multiplier 2</p>
+          <ul>
+            <li><strong>Does (Daggerfall's climb):</strong> every check while you climb rolls against a chance that rises with the skill (held to 5–95), plus up to 10 from Luck. A Khajiit adds 30, and a Climbing spell doubles the skill.</li>
+            <li><strong>Reads:</strong> Luck.</li>
+            <li><strong>Does (Enhanced Climbing, DFO's own, always on online):</strong> the skill sets how high you can reach (1.5 to 2.1 metres), how long you can hang on (6 to 30 seconds), and how fast you shimmy, climb and pull yourself up.</li>
+            <li><strong>Advances:</strong> one use for each climbing check, about every 0.8 seconds on a wall, and one per mantle or ledge caught.</li>
+            <li><strong>In DFO:</strong> past 100 you climb faster, up to 40%.</li>
+          </ul>
+        </div>
 
-      <p id="skill-swimming"><strong>Swimming</strong> · multiplier 1</p>
-      <ul>
-        <li><strong>Does:</strong> swim speed is your land speed × (skill/200 + 1/4), so a quarter of it at 0 and three quarters at 100. Each game minute in water rolls against the skill: a failed roll costs four times the fatigue. Argonians never roll.</li>
-        <li><strong>Advances:</strong> one use per game minute in the water.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-swimming"><strong>Swimming</strong> · multiplier 1</p>
+          <ul>
+            <li><strong>Does:</strong> swim speed is your land speed × (skill/200 + 1/4), so a quarter of it at 0 and three quarters at 100. Each game minute in water rolls against the skill: a failed roll costs four times the fatigue. Argonians never roll.</li>
+            <li><strong>Advances:</strong> one use per game minute in the water.</li>
+          </ul>
+        </div>
+      </section>
 
-      <h2 id="speech">Speech and trade</h2>
+      <section class="panel" aria-labelledby="speech">
+        <h2 id="speech">Speech and trade</h2>
+        <div class="rule"><i class="gem"></i></div>
 
-      <p id="skill-etiquette"><strong>Etiquette</strong> · multiplier 1</p>
-      <ul>
-        <li><strong>Talking politely:</strong> rolls against Etiquette, +5 to how a person takes you on a success and −10 on a failure. The polite tone itself goes down well with nobles, scholars and merchants, and badly with commoners and the underworld.</li>
-        <li><strong>In court:</strong> the Debate plea succeeds at your legal reputation + (Etiquette + Personality)/2, between 5% and 95%.</li>
-        <li><strong>Calming foes:</strong> human enemies, the city watch, vampires and liches answer to Etiquette, at a tenth of the skill.</li>
-        <li><strong>Advances:</strong> one use the first time you talk politely in a conversation, one per Debate plea, and three per foe you calm.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-etiquette"><strong>Etiquette</strong> · multiplier 1</p>
+          <ul>
+            <li><strong>Talking politely:</strong> rolls against Etiquette, +5 to how a person takes you on a success and −10 on a failure. The polite tone itself goes down well with nobles, scholars and merchants, and badly with commoners and the underworld.</li>
+            <li><strong>In court:</strong> the Debate plea succeeds at your legal reputation + (Etiquette + Personality)/2, between 5% and 95%.</li>
+            <li><strong>Calming foes:</strong> human enemies, the city watch, vampires and liches answer to Etiquette, at a tenth of the skill.</li>
+            <li><strong>Advances:</strong> one use the first time you talk politely in a conversation, one per Debate plea, and three per foe you calm.</li>
+          </ul>
+        </div>
 
-      <p id="skill-streetwise"><strong>Streetwise</strong> · multiplier 1</p>
-      <ul>
-        <li><strong>Talking bluntly:</strong> the same roll as Etiquette, for the blunt tone, which goes down well with commoners, the underworld and merchants, and badly with scholars and nobles.</li>
-        <li><strong>In court:</strong> the Lie plea, as Debate but with Streetwise.</li>
-        <li><strong>Calming foes:</strong> thieves, burglars, rogues, acrobats, assassins and nightblades answer to Streetwise, at a tenth of the skill.</li>
-        <li><strong>Advances:</strong> one use the first time you talk bluntly in a conversation, one per Lie plea, and three per foe you calm.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-streetwise"><strong>Streetwise</strong> · multiplier 1</p>
+          <ul>
+            <li><strong>Talking bluntly:</strong> the same roll as Etiquette, for the blunt tone, which goes down well with commoners, the underworld and merchants, and badly with scholars and nobles.</li>
+            <li><strong>In court:</strong> the Lie plea, as Debate but with Streetwise.</li>
+            <li><strong>Calming foes:</strong> thieves, burglars, rogues, acrobats, assassins and nightblades answer to Streetwise, at a tenth of the skill.</li>
+            <li><strong>Advances:</strong> one use the first time you talk bluntly in a conversation, one per Lie plea, and three per foe you calm.</li>
+          </ul>
+        </div>
 
-      <p id="skill-mercantile"><strong>Mercantile</strong> · multiplier 1</p>
-      <ul>
-        <li><strong>Does:</strong> haggles every price: shops, repairs, taverns, spells, temple cures, and DFO's own shipyards and card packs. With Personality, it lowers what you pay and raises what you are offered. At a quality-10 shop with Personality 50, an item worth 1000 sells to you for 703 at Mercantile 0 and 421 at 100, and buys from you for 371 and 632.</li>
-        <li><strong>Reads:</strong> Personality.</li>
-        <li><strong>Advances:</strong> one use per completed trade or repair.</li>
-        <li><strong>In DFO:</strong> online, Mercantile and Personality count up to 100 at most, and no sale pays more than half of what the counter would charge the best haggler.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-mercantile"><strong>Mercantile</strong> · multiplier 1</p>
+          <ul>
+            <li><strong>Does:</strong> haggles every price: shops, repairs, taverns, spells, temple cures, and DFO's own shipyards and card packs. With Personality, it lowers what you pay and raises what you are offered. At a quality-10 shop with Personality 50, an item worth 1000 sells to you for 703 at Mercantile 0 and 421 at 100, and buys from you for 371 and 632.</li>
+            <li><strong>Reads:</strong> Personality.</li>
+            <li><strong>Advances:</strong> one use per completed trade or repair.</li>
+            <li><strong>In DFO:</strong> online, Mercantile and Personality count up to 100 at most, and no sale pays more than half of what the counter would charge the best haggler.</li>
+          </ul>
+        </div>
+      </section>
 
-      <h2 id="languages">Languages</h2>
-      <p>A language does one thing: the first time a creature that speaks it notices you, you may talk it down. The chance is the skill + Personality/10, +10 with your weapon sheathed or −25 with it drawn, plus a Comprehend Languages spell, out of 200. A calmed creature stops being hostile.</p>
-      <ul>
-        <li><strong>Advances:</strong> three uses when you calm a creature, one when you fail. Every language has multiplier 15, so they rise slowly. Training helps.</li>
-      </ul>
+      <section class="panel" aria-labelledby="languages">
+        <h2 id="languages">Languages</h2>
+        <div class="rule"><i class="gem"></i></div>
+        <p>A language does one thing: the first time a creature that speaks it notices you, you may talk it down. The chance is the skill + Personality/10, +10 with your weapon sheathed or −25 with it drawn, plus a Comprehend Languages spell, out of 200. A calmed creature stops being hostile.</p>
+        <ul>
+          <li><strong>Advances:</strong> three uses when you calm a creature, one when you fail. Every language has multiplier 15, so they rise slowly. Training helps.</li>
+        </ul>
 
-      <p id="skill-orcish"><strong>Orcish</strong> · multiplier 15</p>
-      <ul><li>Orcs, Orc Sergeants, Orc Shamans and Orc Warlords.</li></ul>
+        <div class="card">
+          <p id="skill-orcish"><strong>Orcish</strong> · multiplier 15</p>
+          <ul><li>Orcs, Orc Sergeants, Orc Shamans and Orc Warlords.</li></ul>
+        </div>
 
-      <p id="skill-harpy"><strong>Harpy</strong> · multiplier 15</p>
-      <ul><li>Harpies.</li></ul>
+        <div class="card">
+          <p id="skill-harpy"><strong>Harpy</strong> · multiplier 15</p>
+          <ul><li>Harpies.</li></ul>
+        </div>
 
-      <p id="skill-giantish"><strong>Giantish</strong> · multiplier 15</p>
-      <ul><li>Giants and Gargoyles.</li></ul>
+        <div class="card">
+          <p id="skill-giantish"><strong>Giantish</strong> · multiplier 15</p>
+          <ul><li>Giants and Gargoyles.</li></ul>
+        </div>
 
-      <p id="skill-dragonish"><strong>Dragonish</strong> · multiplier 15</p>
-      <ul><li>Dragonlings.</li></ul>
+        <div class="card">
+          <p id="skill-dragonish"><strong>Dragonish</strong> · multiplier 15</p>
+          <ul><li>Dragonlings.</li></ul>
+        </div>
 
-      <p id="skill-nymph"><strong>Nymph</strong> · multiplier 15</p>
-      <ul><li>Nymphs and Lamias.</li></ul>
+        <div class="card">
+          <p id="skill-nymph"><strong>Nymph</strong> · multiplier 15</p>
+          <ul><li>Nymphs and Lamias.</li></ul>
+        </div>
 
-      <p id="skill-daedric"><strong>Daedric</strong> · multiplier 15</p>
-      <ul><li>Fire and Frost Daedra, Daedroths, Daedra Seducers and Daedra Lords.</li></ul>
+        <div class="card">
+          <p id="skill-daedric"><strong>Daedric</strong> · multiplier 15</p>
+          <ul><li>Fire and Frost Daedra, Daedroths, Daedra Seducers and Daedra Lords.</li></ul>
+        </div>
 
-      <p id="skill-spriggan"><strong>Spriggan</strong> · multiplier 15</p>
-      <ul><li>Spriggans.</li></ul>
+        <div class="card">
+          <p id="skill-spriggan"><strong>Spriggan</strong> · multiplier 15</p>
+          <ul><li>Spriggans.</li></ul>
+        </div>
 
-      <p id="skill-centaurian"><strong>Centaurian</strong> · multiplier 15</p>
-      <ul><li>Centaurs. Trained only at temples of Zenithar.</li></ul>
+        <div class="card">
+          <p id="skill-centaurian"><strong>Centaurian</strong> · multiplier 15</p>
+          <ul><li>Centaurs. Trained only at temples of Zenithar.</li></ul>
+        </div>
 
-      <p id="skill-impish"><strong>Impish</strong> · multiplier 15</p>
-      <ul><li>Imps and Dreugh.</li></ul>
+        <div class="card">
+          <p id="skill-impish"><strong>Impish</strong> · multiplier 15</p>
+          <ul><li>Imps and Dreugh.</li></ul>
+        </div>
+      </section>
 
-      <h2 id="healing">Healing</h2>
+      <section class="panel" aria-labelledby="healing">
+        <h2 id="healing">Healing</h2>
+        <div class="rule"><i class="gem"></i></div>
 
-      <p id="skill-medical"><strong>Medical</strong> · multiplier 12</p>
-      <ul>
-        <li><strong>Does:</strong> each hour you rest heals (Medical + 60) × your maximum health / 1000, plus your Endurance bonus, at least 1. Rapid Healing makes the 60 a 100.</li>
-        <li><strong>Bandages:</strong> with the Roleplay &amp; Realism Items mod, on by default, a bandage heals Medical/3, up to 40% of your maximum health.</li>
-        <li><strong>Reads:</strong> Endurance.</li>
-        <li><strong>Advances:</strong> one use per hour of rest, and one per bandage.</li>
-      </ul>
+        <div class="card">
+          <p id="skill-medical"><strong>Medical</strong> · multiplier 12</p>
+          <ul>
+            <li><strong>Does:</strong> each hour you rest heals (Medical + 60) × your maximum health / 1000, plus your Endurance bonus, at least 1. Rapid Healing makes the 60 a 100.</li>
+            <li><strong>Bandages:</strong> with the Roleplay &amp; Realism Items mod, on by default, a bandage heals Medical/3, up to 40% of your maximum health.</li>
+            <li><strong>Reads:</strong> Endurance.</li>
+            <li><strong>Advances:</strong> one use per hour of rest, and one per bandage.</li>
+          </ul>
+        </div>
+      </section>
+
     </article>
   </main>
 </body>

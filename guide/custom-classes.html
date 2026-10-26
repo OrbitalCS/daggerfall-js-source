@@ -30,7 +30,7 @@
       <a href="../guide/custom-classes.html" aria-current="page">Custom classes</a>
     </nav>
   </header>
-  <main id="main" class="doc">
+  <main id="main" class="doc guide">
     <article>
       <h1>Custom classes</h1>
       <p>Daggerfall lets you build a class of your own instead of taking one of its eighteen. On the class screen, choose the last row, <strong>Build a class of your own</strong>. You can save what you build to a file and load it again on any character, on any device.</p>
@@ -55,42 +55,48 @@
         <li>An imported class still has to pass every check Create makes. Any special pick the builder would not allow is left out, and the builder tells you how many.</li>
       </ul>
 
-      <h2 id="example-builds">Example builds</h2>
-      <p>Three builds that show the builder's rules at work: one high on the dagger, one in the middle and one at the bottom. Save a file and open it with Import to see it in the builder, or to start your own from it.</p>
-
-      <h2 id="shieldbearer">Shieldbearer</h2>
-      <p><strong>Shows:</strong> what hit points cost. 20 per level is twelve points on the dagger by itself, so the class levels slowly.</p>
-      <p><a href="classes/shieldbearer.dfclass.json" download>shieldbearer.dfclass.json</a></p>
-      <ul>
-        <li><strong>Dagger:</strong> +19 (levels at ×1.91). 20 hit points per level is +12.</li>
-        <li><strong>Advantages:</strong> Rapid Healing (General) +4, Resistance to Poison +5.</li>
-        <li><strong>Disadvantages:</strong> Forbidden Material: Daedric -2.</li>
-        <li><strong>Primary:</strong> Long Blade, Dodging, Medical. <strong>Major:</strong> Blunt Weapon, Archery, Restoration. <strong>Minor:</strong> Swimming, Climbing, Running, Jumping, Etiquette, Streetwise.</li>
-        <li><strong>Attributes:</strong> Endurance 70 and Strength 60, paid for with Intelligence and Personality at 40.</li>
-      </ul>
-
-      <h2 id="hedge-mage">Hedge Mage</h2>
-      <p><strong>Shows:</strong> paying for magic. Few hit points and a forbidden armor take points off the dagger, and Increased Magery puts them back. With all six schools in its primary and major skills, it starts with the Spellsword's spells.</p>
-      <p><a href="classes/hedge-mage.dfclass.json" download>hedge-mage.dfclass.json</a></p>
-      <ul>
-        <li><strong>Dagger:</strong> +4 (levels at ×1.13). 6 hit points per level is -4.</li>
-        <li><strong>Advantages:</strong> Increased Magery (2× INT in spell points) +8, Resistance to Magic +5.</li>
-        <li><strong>Disadvantages:</strong> Forbidden Armor Type: Plate -5.</li>
-        <li><strong>Primary:</strong> Destruction, Restoration, Alteration. <strong>Major:</strong> Mysticism, Thaumaturgy, Illusion. <strong>Minor:</strong> Short Blade, Dodging, Running, Daedric, Etiquette, Mercantile.</li>
-        <li><strong>Attributes:</strong> Intelligence 75 and Willpower 65, paid for with Strength at 35 and Endurance at 40.</li>
-      </ul>
-
-      <h2 id="sunscorned">Sunscorned</h2>
-      <p><strong>Shows:</strong> how far disadvantages can take the dagger. Four of them, two heavy, bring it to the bottom of its range, the fastest a class can level. It also moves reputation from the nobility to the underworld.</p>
-      <p><a href="classes/sunscorned.dfclass.json" download>sunscorned.dfclass.json</a></p>
-      <ul>
-        <li><strong>Dagger:</strong> -12, the bottom (levels at ×0.30). 12 hit points per level is +4.</li>
-        <li><strong>Advantages:</strong> Expertise in Hand-to-Hand +2, Athleticism +4, Adrenaline Rush +4.</li>
-        <li><strong>Disadvantages:</strong> Damage from Sunlight -10, Critical Weakness to Fire -14, Forbidden Shield Types: Tower Shield -1, Forbidden Material: Iron -1.</li>
-        <li><strong>Primary:</strong> Hand-to-Hand, Stealth, Dodging. <strong>Major:</strong> Critical Strike, Climbing, Lockpicking. <strong>Minor:</strong> Running, Jumping, Swimming, Streetwise, Pickpocket, Medical.</li>
-        <li><strong>Attributes:</strong> Agility and Speed 65, paid for with Personality at 35.</li>
-        <li><strong>Reputation:</strong> underworld +2, nobility -2.</li>
-      </ul>
+      <section class="panel" aria-labelledby="example-builds">
+        <h2 id="example-builds">Example builds</h2>
+        <div class="rule"><i class="gem"></i></div>
+        <p>Three builds that show the builder's rules at work: one high on the dagger, one in the middle and one at the bottom. Save a file and open it with Import to see it in the builder, or to start your own from it.</p>
+        <div class="card">
+          <h3 id="shieldbearer">Shieldbearer</h3>
+          <p><strong>Shows:</strong> what hit points cost. 20 per level is twelve points on the dagger by itself, so the class levels slowly.</p>
+          <p><a href="classes/shieldbearer.dfclass.json" download>shieldbearer.dfclass.json</a></p>
+          <ul>
+            <li><strong>Dagger:</strong> +19 (levels at ×1.91). 20 hit points per level is +12.</li>
+            <li><strong>Advantages:</strong> Rapid Healing (General) +4, Resistance to Poison +5.</li>
+            <li><strong>Disadvantages:</strong> Forbidden Material: Daedric -2.</li>
+            <li><strong>Primary:</strong> Long Blade, Dodging, Medical. <strong>Major:</strong> Blunt Weapon, Archery, Restoration. <strong>Minor:</strong> Swimming, Climbing, Running, Jumping, Etiquette, Streetwise.</li>
+            <li><strong>Attributes:</strong> Endurance 70 and Strength 60, paid for with Intelligence and Personality at 40.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 id="hedge-mage">Hedge Mage</h3>
+          <p><strong>Shows:</strong> paying for magic. Few hit points and a forbidden armor take points off the dagger, and Increased Magery puts them back. With all six schools in its primary and major skills, it starts with the Spellsword's spells.</p>
+          <p><a href="classes/hedge-mage.dfclass.json" download>hedge-mage.dfclass.json</a></p>
+          <ul>
+            <li><strong>Dagger:</strong> +4 (levels at ×1.13). 6 hit points per level is -4.</li>
+            <li><strong>Advantages:</strong> Increased Magery (2× INT in spell points) +8, Resistance to Magic +5.</li>
+            <li><strong>Disadvantages:</strong> Forbidden Armor Type: Plate -5.</li>
+            <li><strong>Primary:</strong> Destruction, Restoration, Alteration. <strong>Major:</strong> Mysticism, Thaumaturgy, Illusion. <strong>Minor:</strong> Short Blade, Dodging, Running, Daedric, Etiquette, Mercantile.</li>
+            <li><strong>Attributes:</strong> Intelligence 75 and Willpower 65, paid for with Strength at 35 and Endurance at 40.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 id="sunscorned">Sunscorned</h3>
+          <p><strong>Shows:</strong> how far disadvantages can take the dagger. Four of them, two heavy, bring it to the bottom of its range, the fastest a class can level. It also moves reputation from the nobility to the underworld.</p>
+          <p><a href="classes/sunscorned.dfclass.json" download>sunscorned.dfclass.json</a></p>
+          <ul>
+            <li><strong>Dagger:</strong> -12, the bottom (levels at ×0.30). 12 hit points per level is +4.</li>
+            <li><strong>Advantages:</strong> Expertise in Hand-to-Hand +2, Athleticism +4, Adrenaline Rush +4.</li>
+            <li><strong>Disadvantages:</strong> Damage from Sunlight -10, Critical Weakness to Fire -14, Forbidden Shield Types: Tower Shield -1, Forbidden Material: Iron -1.</li>
+            <li><strong>Primary:</strong> Hand-to-Hand, Stealth, Dodging. <strong>Major:</strong> Critical Strike, Climbing, Lockpicking. <strong>Minor:</strong> Running, Jumping, Swimming, Streetwise, Pickpocket, Medical.</li>
+            <li><strong>Attributes:</strong> Agility and Speed 65, paid for with Personality at 35.</li>
+            <li><strong>Reputation:</strong> underworld +2, nobility -2.</li>
+          </ul>
+        </div>
+      </section>
     </article>
   </main>
 </body>

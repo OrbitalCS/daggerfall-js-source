@@ -22,7 +22,7 @@ import {
   parseCustomClassDoc, difficultyPoints, repPointsToDistribute, DIFFICULTY_MIN, DIFFICULTY_MAX, STAT_DEFAULT,
 } from '../../../src/systems/customClass.js';
 import { totalAdjust } from '../../../src/systems/specialAdvantages.js';
-import { DOCUMENT_PATHS, transformDocument, landingHtml } from '../../../scripts/landingHtml.mjs';
+import { DOCUMENT_PATHS, GUIDE_KIT_CSS, transformDocument, landingHtml } from '../../../scripts/landingHtml.mjs';
 
 const read = (p) => readFileSync(new URL(`../../../${p}`, import.meta.url), 'utf8');
 
@@ -94,7 +94,7 @@ test('PLAYER-GUIDE: the pages are DOCUMENTS - no script, no file and no style of
     assert.doesNotMatch(html, /<script/i, `${page.file}: runs no script`);
     assert.doesNotMatch(html, /<img|<link\b|<style|\sstyle=/i, `${page.file}: references no file and brings no style - the skin is put in at build`);
     assert.match(html, /<a class="skip" href="#main">Skip to content<\/a>/, `${page.file}: a keyboard reader can skip the bar`);
-    assert.match(html, /<main id="main" class="doc">/);
+    assert.match(html, /<main id="main" class="doc guide">/, `${page.file}: a document, and the guide's own (DOCUMENT_CSS's .guide rules)`);
     assert.match(html, /<a class="home" href="\.\.\/">DFO Online<\/a>/, `${page.file}: the way home is relative`);
     assert.match(html, new RegExp(`<title>${page.title} - DFO Online</title>`), `${page.file}: the tab says which page`);
     // the BAR, not the page: a body that links a page in the same words is not the bar naming it
@@ -113,7 +113,7 @@ test('PLAYER-GUIDE: the pages ship - build inputs, dressed by the seam, linked f
     assert.ok(input.includes(page.file), `${page.file} works under npm run dev and never ships`);
     const path = `/${page.file}`;
     assert.ok(DOCUMENT_PATHS.includes(path), `${path} is a document`);
-    assert.deepEqual(handler('<html><head></head><body></body></html>', { path }), transformDocument('<html><head></head><body></body></html>'), `${path} is not dressed as a document`);
+    assert.deepEqual(handler('<html><head></head><body></body></html>', { path }), transformDocument('<html><head></head><body></body></html>', { kit: GUIDE_KIT_CSS }), `${path} is not dressed as a guide page (PLAYER-GUIDE-STYLE: a document wearing the landing page's kit)`);
   }
   const end = read('index.html').match(/<footer class="end">([\s\S]*?)<\/footer>/)?.[1] ?? '';
   assert.match(end, /<a href="\.\/guide\/">Guide<\/a>/, 'the landing page\'s foot links the guide');

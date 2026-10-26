@@ -828,6 +828,7 @@ const fittingAt = (x, y, t = T) => {
     at(t.brass, 1, 1, F - 2, F - 2), at(t.outline, 0, 0, F, F),
   ];
 };
+/** PLAYER-GUIDE-STYLE: a role given no selectors writes no rule (the guide's pages have no primary press). */
 export function siteKitCss(r = SITE_ROLES, t = T) {
   const pressable = [...r.button, ...r.primary];
   const fittings = [['left', 'top'], ['right', 'top'], ['left', 'bottom'], ['right', 'bottom']].flatMap(([x, y]) => fittingAt(x, y, t));
@@ -856,11 +857,9 @@ ${list(pressable)} {
   border-color: ${RAISED};
   background-color: ${t.groundButton}; background-image: ${LIT_BAND};
   box-shadow: ${RING}, 2px 2px 0 1px rgba(0,0,0,0.45); }
-${list(r.primary)} { border-color: ${BRASS}; background-color: #2a2217; }
-${list(pressable, ':hover')},
+${r.primary.length ? `${list(r.primary)} { border-color: ${BRASS}; background-color: #2a2217; }\n` : ''}${list(pressable, ':hover')},
 ${list(pressable, ':focus-visible')} { border-color: ${BRASS}; background-color: ${t.groundButtonHi}; background-image: ${LIT_BAND}; }
-${list(r.primary, ':hover')}, ${list(r.primary, ':focus-visible')} { background-color: #3a2e1c; }
-${list(pressable, ':active')} { border-color: ${SUNK}; translate: 1px 1px; box-shadow: ${RING}, inset 2px 2px 0 rgba(0,0,0,0.5); }
+${r.primary.length ? `${list(r.primary, ':hover')}, ${list(r.primary, ':focus-visible')} { background-color: #3a2e1c; }\n` : ''}${list(pressable, ':active')} { border-color: ${SUNK}; translate: 1px 1px; box-shadow: ${RING}, inset 2px 2px 0 rgba(0,0,0,0.5); }
 /* WELL - sunk into the surface */
 ${list(r.well)} { border-color: ${SUNK}; background-color: rgba(4,5,7,0.7); box-shadow: ${RING}, inset 2px 2px 0 rgba(0,0,0,0.5); }
 @media (prefers-reduced-motion: reduce) { ${list(pressable, ':active')} { translate: none; } }

@@ -162,8 +162,8 @@
   {
     "name": "TERMS1-documents-left-undressed",
     "file": "scripts/landingHtml.mjs",
-    "old": "        if (DOCUMENT_PATHS.includes(ctx.path)) return transformDocument(html);",
-    "new": "        if (DOCUMENT_PATHS.includes(ctx.path)) return html;",
+    "old": "return transformDocument(html, GUIDE_PATHS.includes(ctx.path) ? { kit: GUIDE_KIT_CSS } : {});",
+    "new": "return html;",
     "tests": ["test/ui/enhanced/terms1.test.js"],
     "note": "A document with no tokens reads var() as nothing."
   },

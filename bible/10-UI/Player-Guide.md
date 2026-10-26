@@ -20,8 +20,30 @@ The landing page's foot links the guide (`index.html`, beside Terms and Privacy)
 The guide copies the Terms and the Privacy Policy (TERMS1, `test/ui/enhanced/terms1.test.js`): plain HTML
 with no script, no file and no style of its own. At build, `scripts/landingHtml.mjs:"export const DOCUMENT_PATHS"`
 names each page and the seam dresses it with the skin's tokens, the fonts, the icon, the digit five and the one
-shared rule set `DOCUMENT_CSS` (`.docbar`, `.home`, `.doc`, `.caps`). The pages use those classes and add no CSS.
+shared rule set `DOCUMENT_CSS` (`.docbar`, `.home`, `.doc`, `.caps`). The pages use those classes and bring no CSS of their own (the guide's rules sit in `DOCUMENT_CSS` under `.guide`, and its stone in `GUIDE_KIT_CSS`, below).
 Each is a build input in `vite.config.js` (`guide`, `guideRaces`, `guideSkills`, `guideAttributes`, `guideClasses`).
+
+**PLAYER-GUIDE-STYLE (optional, its own commit).** The guide wears the landing page's look; the Terms and the Privacy
+Policy do not. The landing page divides it in two, and the guide keeps the division:
+
+- **The shapes** - the framed panel (`index.html` `main > section` and its heading), the bordered card (`.cols > div`),
+  the step box and its numeral (`.steps`, `.step`), the label/value rows a race's details stand in (`.qa`), the link buttons (`.doorlinks a`), the gem divider (`.rule`, `.gem`)
+  and their 860px step-down - are copied value for value into `DOCUMENT_CSS` under `.guide` (each guide page's
+  `<main>` is `class="doc guide"`). They are borders, room and the skin's tokens, so the documents' colour law
+  (`terms1.test.js`) still holds.
+- **The stone and brass** - the bevel, the grain, the corner studs, the raised and lit buttons - are the PLUS-SITE kit's,
+  and its tones are the game's frame tones, not the skin's. So they are not copied: `scripts/landingHtml.mjs`
+  `GUIDE_KIT_CSS` is the kit's own generator (`src/ui/enhanced/enhancedFrame.js` `siteKitCss`) called with the guide's
+  selectors (a panel is a window, its heading the band, a card, a step or a label/value row a panel, a link a button, a step's numeral a
+  well), and the build adds it to the guide's pages alone (`GUIDE_PATHS`), after the documents' rules, as the
+  landing page's kit comes after its sheet. The generator now writes no rule for a role given no selectors (the guide
+  has no primary press); the landing page's own kit is byte for byte what it was.
+
+The jump links (races, skill groups) are the one layout of the guide's own: a grid of equal buttons filling the reading
+column, four across, two under 600px.
+
+`terms1.test.js` says so: every document is dressed as one, the guide's pages also wear the kit, and the legal pages
+never do (two mutants, one each way). No night sky: the guide keeps the documents' quiet ground.
 
 ## 3. The facts are the code's
 

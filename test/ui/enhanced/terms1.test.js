@@ -29,7 +29,7 @@ import { accountCard } from '../../../src/ui/enhanced/enhancedAccount.js';
 import { SESSION_KEY, DEFAULT_ACCOUNT_SERVICE, REFUSALS } from '../../../src/net/accountClient.js';
 import { ENHANCED_TOKENS } from '../../../src/ui/enhanced/enhancedStyle.js';
 import { PIXELIFY_FIVE_FACE } from '../../../src/ui/pixelifyFive.js';
-import { DOCUMENT_PATHS, DOCUMENT_CSS, transformDocument, landingHtml } from '../../../scripts/landingHtml.mjs';
+import { DOCUMENT_PATHS, DOCUMENT_CSS, GUIDE_PATHS, GUIDE_KIT_CSS, transformDocument, landingHtml } from '../../../scripts/landingHtml.mjs';
 import worker from '../../../server-account/src/index.js';
 import { createGuest, register, legalRefusal } from '../../../server-account/src/accounts.js';
 
@@ -168,10 +168,16 @@ test('TERMS1: the build seam dresses both documents in the skin - its tokens, th
     '/guide/index.html', '/guide/races.html', '/guide/skills.html', '/guide/attributes.html', '/guide/custom-classes.html',
   ]);
   const { handler } = landingHtml().transformIndexHtml;
+  // PLAYER-GUIDE-STYLE: every document is dressed as one; the player guide's pages ALSO wear the landing page's stone
+  // and brass (GUIDE_KIT_CSS, siteKitCss cut for the guide's boxes), and the two legal pages never do - they stay plain.
+  assert.deepEqual([...GUIDE_PATHS], DOCUMENT_PATHS.filter((p) => p.startsWith('/guide/')), 'the guide\'s pages, and only they');
   for (const path of DOCUMENT_PATHS) {
     const out = handler('<html><head></head><body></body></html>', { path });
-    assert.deepEqual(out, transformDocument('<html><head></head><body></body></html>'), `${path} is not dressed as a document`);
+    const guide = GUIDE_PATHS.includes(path);
+    assert.deepEqual(out, transformDocument('<html><head></head><body></body></html>', guide ? { kit: GUIDE_KIT_CSS } : {}), `${path} is not dressed as a document`);
+    assert.equal(out.tags.some((t) => t.attrs?.id === 'guide-kit'), guide, `${path}: ${guide ? 'the guide wears the kit' : 'a legal page stays plain'}`);
   }
+  assert.ok(GUIDE_KIT_CSS.includes('.guide .panel') && !/^\s*,?\s*\{/m.test(GUIDE_KIT_CSS), 'the kit is cut for the guide\'s boxes, with no rule left without a selector');
   assert.equal(handler('<p>x</p>', { path: '/viewer.html' }), '<p>x</p>', 'a lab page is still left alone');
   const { tags } = transformDocument('<html></html>');
   const byId = (id) => tags.find((t) => t.tag === 'style' && t.attrs?.id === id);
