@@ -1,0 +1,1 @@
+import"./talk-C4L_jD2V.js";import"./equip-D4R-xCtO.js";import"./professionLaw-APSgUj2g.js";Object.freeze({_fns:[],add(e){return this._fns.push(e),()=>{let t=this._fns.indexOf(e);t>=0&&this._fns.splice(t,1)}},raise(e){for(let t of[...this._fns])t(e)}});

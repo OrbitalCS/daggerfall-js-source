@@ -1,0 +1,1 @@
+import{n as e,t}from"./settings-CRQjSgqj.js";import"./plusPad-BSd8SzWG.js";var n=()=>t(`Controls`,`InvertMouseVertical`)?-1:1;function r(t){let r=180/Math.PI/(2*e(`Controls`,`MouseLookSensitivity`,.1,16));return[(t?.[0]??0)*r,(t?.[1]??0)*r*n()]}export{r as t};

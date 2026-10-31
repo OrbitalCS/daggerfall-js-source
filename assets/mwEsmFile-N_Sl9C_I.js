@@ -1,0 +1,1 @@
+new TextDecoder(`windows-1252`);var e=Object.freeze([`head`,`hair`,`neck`,`chest`,`groin`,`hand`,`wrist`,`forearm`,`upperarm`,`foot`,`ankle`,`knee`,`upperleg`,`clavicle`,`tail`]),t=Object.freeze({skin:0,clothing:1,armor:2}),n=e=>String(e).toLowerCase().endsWith(`1st`);Object.freeze({female:1,essential:2,respawn:4,autocalc:16});export{e as n,n as r,t};

@@ -1,0 +1,1 @@
+var e=1;function t(t){e=t>>>0}function n(){return e}function r(t){e=t>>>0}function i(){return e=Math.imul(e,1103515245)+12345>>>0,e>>>16&32767}function a(e,t){return i()%(t-e+1)+e}export{t as a,r as i,i as n,a as r,n as t};

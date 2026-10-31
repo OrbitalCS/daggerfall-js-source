@@ -1,0 +1,1 @@
+function e(e){let t;try{t=new URL(e)}catch{return null}if(!t.pathname.startsWith(`/`))return null;t.search=``,t.hash=``;let n=t.pathname.replace(/^(.*)\/(?:assets|src)\/[^/]*(?:\/.*)?$/,`$1/`);return n===t.pathname?null:(t.pathname=n,t.href)}var t=e(import.meta.url);export{t};
